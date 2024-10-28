@@ -4,11 +4,11 @@ import './style.css'
 import ProductCarousel from './catalog/ui/ProductCarousel';
 
 const ITEMS_NAVBAR = [
-  { href: '/catalog', label: 'Catalog' },
-  { href: '/about', label: 'About' },
-  { href: '/contacts', label: 'Contacts' },
-  { href: '/delivery', label: 'Delivery' },
-  { href: '/payment', label: 'Payment' },
+  { href: '/catalog', label: 'Colecciones' },
+  { href: '/contacts', label: 'Temas' },
+  { href: '/about', label: 'Marcas' },
+  { href: '/delivery', label: 'Unete a la diversión' },
+  { href: '/reviews', label: 'Sobre Nosotros' },
 ];
 
 const slides = [
@@ -31,12 +31,12 @@ function App() {
   return (
     <div className='h-screen'>
       <header className='relative'>
-        <nav className='flex justify-between items-center fixed h-16 z-10 top-0 text-white w-full px-12 py-14'>
+        <nav className='flex items-center fixed h-16 z-10 top-0 text-white w-full px-12 py-14'>
           <div className='flex flex-grow basis-0'>
-            <img src="logo-miranashop.svg" alt="Mirana Shop" className='w-36' />
+            <img src="logo-miranashop.svg" alt="Mirana Shop" className='w-[190px]' />
           </div>
 
-          <ul className='flex justify-between font-roboto-condensed gap-5 font-bold text-lg'>
+          <ul className='flex justify-between font-roboto-condensed gap-16 font-bold text-lg'>
             {ITEMS_NAVBAR.map((item) => (
               <li key={item.href}>{item.label}</li>
             ))}
