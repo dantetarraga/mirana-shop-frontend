@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 const slides = [
   {
@@ -6,26 +6,26 @@ const slides = [
     image: '/banners/Chucky.webp',
     title: 'ALIEN: ROMULUS',
     description:
-      'Ultimate Scorched Xenomorph 7" Scale Action Figure & Accessory Set',
+      'Ultimate Scorched Xenomorph 7" Scale Action Figure & Accessory Set'
   },
   {
     id: 2,
     image: '/banners/inferno.jpg',
     title: 'ALIEN MASK SET',
-    description: 'Exclusive Collectible Alien Mask & Accessories',
-  },
-];
+    description: 'Exclusive Collectible Alien Mask & Accessories'
+  }
+]
 
 const ProductCarousel = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0)
 
   const handlePrev = () => {
-    setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
-  };
+    setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1))
+  }
 
   const handleNext = () => {
-    setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-  };
+    setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1))
+  }
 
   return (
     <div className='w-full overflow-hidden'>
@@ -60,11 +60,11 @@ const ProductCarousel = () => {
             className={`w-3 h-3 rounded-full ${
               index === currentSlide ? 'bg-white' : 'bg-gray-400'
             }`}
-          ></button>
+          />
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProductCarousel;
+export default ProductCarousel
