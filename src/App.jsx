@@ -46,7 +46,7 @@ function App () {
 
         <div className='space-y-5'>
           <h2 className='text-center font-bold text-4xl'>Recogerlo Todo</h2>
-          <div className='grid grid-cols-4 gap-6'>
+          <div className='grid grid-cols-4 gap-[24px]'>
             {
               Array.from({ length: 4 }).map((_, index) => (
                 <div key={index} className='w-[296px] relative cursor-pointer'>
