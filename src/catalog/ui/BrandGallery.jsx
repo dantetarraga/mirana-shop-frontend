@@ -23,7 +23,7 @@ const BrandGallery = () => {
         </div>
       </div>
 
-      <div className='flex gap-5 flex-wrap items-center'>
+      <div className='flex gap-10 flex-wrap items-center'>
         {BRANDS.map((brand, index) => (
           <img key={index} src={brand} alt={`Brand ${index + 1}`} className='w-36' />
         ))}
