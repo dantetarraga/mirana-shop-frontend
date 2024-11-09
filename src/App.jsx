@@ -49,7 +49,7 @@ function App () {
           <div className='grid grid-cols-4 gap-6'>
             {
               Array.from({ length: 4 }).map((_, index) => (
-                <div key={index} className='relative'>
+                <div key={index} className='w-[296px] relative cursor-pointer'>
                   <img
                     src='/10.jpg'
                     alt='Product'
@@ -57,7 +57,7 @@ function App () {
                   />
                   <p className='text-5xl font-bold text-white absolute bottom-12 left-8'>La magia te espera</p>
 
-                  <p className='absolute text-lg font-bold -bottom-5 left-1/2 transform -translate-x-1/2 py-3 px-4 rounded-md bg-gray-800 text-white'>Prisionero de guerra</p>
+                  <p className='absolute text-sm font-bold -bottom-5 left-1/2 transform -translate-x-1/2 py-3 px-4 rounded-md bg-gray-800 text-white'>Prisionero de guerra</p>
                 </div>
               ))
             }
