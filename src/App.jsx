@@ -1,6 +1,7 @@
 import { Search, ShoppingCart, User } from 'lucide-react'
 import './style.css'
 import ProductCarousel from './catalog/ui/ProductCarousel'
+import BrandGallery from './catalog/ui/BrandGallery'
 
 const ITEMS_NAVBAR = [
   { href: '/catalog', label: 'Colecciones' },
@@ -8,17 +9,6 @@ const ITEMS_NAVBAR = [
   { href: '/about', label: 'Marcas' },
   { href: '/delivery', label: 'Unete a la diversión' },
   { href: '/reviews', label: 'Sobre Nosotros' }
-]
-
-const BRANDS = [
-  '/brands/1.svg',
-  '/brands/2.svg',
-  '/brands/3.svg',
-  '/brands/4.svg',
-  '/brands/5.svg',
-  '/brands/6.svg',
-  '/brands/7.svg',
-  '/brands/8.svg'
 ]
 
 function App () {
@@ -34,7 +24,7 @@ function App () {
             />
           </div>
 
-          <ul className='flex justify-between font-roboto-condensed gap-16 font-bold text-lg'>
+          <ul className='flex justify-between gap-16 font-bold text-lg'>
             {ITEMS_NAVBAR.map((item) => (
               <li key={item.href}>{item.label}</li>
             ))}
@@ -52,24 +42,27 @@ function App () {
       </header>
 
       <main className='mx-auto container'>
-        <section className='flex gap-10'>
-          <div className='relative w-[360px] h-72'>
-            <div className='absolute top-0 left-0 w-full h-full'>
-              <div className='bg-gray-900 text-white p-8 transform -rotate-12 origin-center w-full h-full'>
-                <div className='rotate-12 font-montserrat absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 space-y-6'>
-                  <h2 className='text-3xl font-black'>TODAS TUS MARCAS FAVORITAS</h2>
-                  <p className='font-extrabold cursor-pointer border-b-4 w-fit border-[#f24040]'>SEE ALL BRANDS</p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <BrandGallery />
 
-          <div className='flex gap-5 flex-wrap items-center'>
-            {BRANDS.map((brand, index) => (
-              <img key={index} src={brand} alt={`Brand ${index + 1}`} className='w-36' />
-            ))}
+        <div className='space-y-5'>
+          <h2 className='text-center font-bold text-4xl'>Recogerlo Todo</h2>
+          <div className='grid grid-cols-4 gap-6'>
+            {
+              Array.from({ length: 4 }).map((_, index) => (
+                <div key={index} className='relative'>
+                  <img
+                    src='/10.jpg'
+                    alt='Product'
+                    className='rounded-md object-cover'
+                  />
+                  <p className='text-5xl font-bold text-white absolute bottom-12 left-8'>La magia te espera</p>
+
+                  <p className='absolute text-lg font-bold -bottom-5 left-1/2 transform -translate-x-1/2 py-3 px-4 rounded-md bg-gray-800 text-white'>Prisionero de guerra</p>
+                </div>
+              ))
+            }
           </div>
-        </section>
+        </div>
       </main>
 
       <footer>
