@@ -19,14 +19,6 @@ const slides = [
 const ProductCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  const handlePrev = () => {
-    setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1))
-  }
-
-  const handleNext = () => {
-    setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1))
-  }
-
   return (
     <div className='w-full overflow-hidden'>
       <div

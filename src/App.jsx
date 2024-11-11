@@ -2,6 +2,7 @@ import { Search, ShoppingCart, User } from 'lucide-react'
 import './style.css'
 import ProductCarousel from './catalog/ui/ProductCarousel'
 import BrandGallery from './catalog/ui/BrandGallery'
+import LatestReleases from './catalog/ui/LatestReleases'
 
 const ITEMS_NAVBAR = [
   { href: '/catalog', label: 'Colecciones' },
@@ -64,6 +65,8 @@ function App () {
           </div>
         </div>
       </main>
+
+      <LatestReleases />
 
       <footer>
         <p>Mirana Shop</p>

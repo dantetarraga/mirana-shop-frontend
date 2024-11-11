@@ -9,3 +9,9 @@
 body {
   @apply font-roboto-condensed
 }
+
+@layer utilities {
+  .clip-banner {
+    clip-path: polygon(0 0, 100% 13%, 100% 100%, 0% 100%);
+  }
+}
