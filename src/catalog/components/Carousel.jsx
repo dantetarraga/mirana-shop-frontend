@@ -8,9 +8,12 @@ const Carousel = ({ children }) => {
   const prevSlide = () => setCurrentIndex((prevIndex) => (prevIndex - 1 + totalSlides) % totalSlides)
 
   return (
-    <div className='relative p-6 w-full'>
+    <div className='relative p-6 w-full h-auto'>
       <div className='absolute w-full overflow-hidden'>
-        <div className='flex gap-6 transition-transform duration-700' style={{ transform: `translateX(-${currentIndex * 374}px)` }}>
+        <div
+          className='flex gap-6 transition-transform duration-700'
+          style={{ width: `${totalSlides * 100}%`, transform: `translateX(-${(currentIndex / totalSlides) * 100}%)` }}
+        >
           {children}
         </div>
       </div>

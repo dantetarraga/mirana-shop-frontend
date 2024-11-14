@@ -14,4 +14,8 @@ body {
   .clip-banner {
     clip-path: polygon(0 0, 100% 13%, 100% 100%, 0% 100%);
   }
+
+  .clip-banner-inverse {
+    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+  }
 }

@@ -47,7 +47,7 @@ const TOYS = [
 
 const RecommendedSection = () => {
   return (
-    <section>
+    <section className='h-[450px]'>
       <h3 className='uppercase text-center text-4xl font-extrabold'>Recomendados para ti</h3>
       <Carousel>
         {TOYS.map((toy, index) => (
