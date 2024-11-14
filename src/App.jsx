@@ -3,6 +3,7 @@ import './style.css'
 import ProductCarousel from './catalog/ui/ProductCarousel'
 import BrandGallery from './catalog/ui/BrandGallery'
 import LatestReleases from './catalog/ui/LatestReleases'
+import RecommendedSection from './catalog/ui/RecommendedSection'
 
 const ITEMS_NAVBAR = [
   { href: '/catalog', label: 'Colecciones' },
@@ -68,6 +69,7 @@ function App () {
 
       <LatestReleases />
 
+      <RecommendedSection />
       <footer>
         <p>Mirana Shop</p>
       </footer>
