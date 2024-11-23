@@ -48,14 +48,19 @@ function App () {
         <div className='mx-auto max-w-[1250px] '>
           <BrandGallery />
 
-          <div className='mt-10 space-y-5'>
-            <h2 className='text-4xl font-black tracking-tighter text-center uppercase rounded-md font-montserrat'>
-              Coleccionalo todo
-            </h2>
+          <div className='py-10 mt-10 space-y-5'>
+            <div className='flex justify-center shadow-md shadow-slate-300'>
+              <h2 className='p-5 text-4xl font-black tracking-tighter text-center uppercase rounded-md w-fit font-montserrat'>
+                Coleccionalo todo
+              </h2>
+            </div>
 
             <div className='flex gap-[20px]'>
               {Array.from({ length: 4 }).map((_, index) => (
-                <div key={index} className='relative cursor-pointer group hover:shadow-2xl'>
+                <div
+                  key={index}
+                  className='relative cursor-pointer group hover:shadow-2xl'
+                >
                   <div className='absolute inset-0 z-10 bg-gradient-to-t from-[#101820] via-transparent to-transparent rounded-lg' />
 
                   <div className='overflow-hidden rounded-lg'>
@@ -77,7 +82,6 @@ function App () {
             </div>
           </div>
         </div>
-
       </main>
 
       <LatestReleases />
