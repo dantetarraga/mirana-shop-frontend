@@ -18,7 +18,7 @@ function App () {
   return (
     <div className='h-screen'>
       <header className='relative'>
-        <nav className='flex items-center fixed h-16 z-10 top-0 text-white w-full px-12 py-14'>
+        <nav className='fixed top-0 z-10 flex items-center w-full h-16 px-12 text-white py-14'>
           <div className='flex flex-grow basis-0'>
             <img
               src='logo-miranashop.svg'
@@ -27,13 +27,13 @@ function App () {
             />
           </div>
 
-          <ul className='flex justify-between gap-16 font-bold text-lg'>
+          <ul className='flex justify-between gap-16 text-lg font-bold'>
             {ITEMS_NAVBAR.map((item) => (
               <li key={item.href}>{item.label}</li>
             ))}
           </ul>
 
-          <div className='flex gap-5 flex-grow basis-0 justify-end'>
+          <div className='flex justify-end flex-grow gap-5 basis-0'>
             <Search />
             <User />
             <ShoppingCart />
@@ -44,28 +44,40 @@ function App () {
         <ProductCarousel />
       </header>
 
-      <main className='mx-auto container'>
-        <BrandGallery />
+      <main>
+        <div className='mx-auto max-w-[1250px] '>
+          <BrandGallery />
 
-        <div className='space-y-5'>
-          <h2 className='text-center font-bold text-4xl'>Recogerlo Todo</h2>
-          <div className='grid grid-cols-4 gap-[24px]'>
-            {
-              Array.from({ length: 4 }).map((_, index) => (
-                <div key={index} className='w-[296px] relative cursor-pointer'>
-                  <img
-                    src='/10.jpg'
-                    alt='Product'
-                    className='rounded-md object-cover'
-                  />
-                  <p className='text-5xl font-bold text-white absolute bottom-12 left-8'>La magia te espera</p>
+          <div className='mt-10 space-y-5'>
+            <h2 className='text-4xl font-black tracking-tighter text-center uppercase rounded-md font-montserrat'>
+              Coleccionalo todo
+            </h2>
 
-                  <p className='absolute text-sm font-bold -bottom-5 left-1/2 transform -translate-x-1/2 py-3 px-4 rounded-md bg-gray-800 text-white'>Prisionero de guerra</p>
+            <div className='flex gap-[20px]'>
+              {Array.from({ length: 4 }).map((_, index) => (
+                <div key={index} className='relative cursor-pointer group hover:shadow-2xl'>
+                  <div className='absolute inset-0 z-10 bg-gradient-to-t from-[#101820] via-transparent to-transparent rounded-lg' />
+
+                  <div className='overflow-hidden rounded-lg'>
+                    <img
+                      src='/star-wars.jpg'
+                      alt='Product'
+                      className='object-cover w-full transition-transform duration-500 transform group-hover:scale-105'
+                    />
+                    <p className='absolute z-20 text-3xl font-black tracking-tighter text-white uppercase bottom-10 left-4 group-hover:text-[#e8ecf6]'>
+                      La magia te espera
+                    </p>
+                  </div>
+
+                  <p className='absolute z-20 px-4 py-3 text-sm font-bold text-white transform -translate-x-1/2 bg-[#101820] rounded-sm -bottom-5 left-1/2 group-hover:bg-[#F23F40]'>
+                    Comprar
+                  </p>
                 </div>
-              ))
-            }
+              ))}
+            </div>
           </div>
         </div>
+
       </main>
 
       <LatestReleases />

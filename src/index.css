@@ -7,7 +7,7 @@
 @tailwind utilities;
 
 body {
-  @apply font-roboto-condensed
+  @apply font-montserrat 
 }
 
 @layer utilities {

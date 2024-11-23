@@ -11,21 +11,28 @@ const BRANDS = [
 
 const BrandGallery = () => {
   return (
-    <section className='flex gap-10'>
-      <div className='relative w-[360px] h-72'>
-        <div className='absolute top-0 left-0 w-full h-full'>
-          <div className='bg-gray-900 text-white p-8 transform -rotate-12 origin-center w-full h-full'>
-            <div className='rotate-12 font-montserrat absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 space-y-6'>
-              <h2 className='text-3xl font-black'>TODAS TUS MARCAS FAVORITAS</h2>
-              <p className='font-extrabold cursor-pointer border-b-4 w-fit border-[#f24040]'>SEE ALL BRANDS</p>
-            </div>
-          </div>
-        </div>
+    <section className='relative z-10 flex items-center gap-[35px] text-white font-montserrat mt-8'>
+      <div className='-z-10 absolute bg-gray-900 w-[350px] h-[350px] -left-[65px] -rotate-[10deg]' />
+
+      <div className='flex flex-col justify-center gap-[24px]'>
+        <h2 className='text-4xl font-black'>
+          TODAS TUS <br /> MARCAS FAVORITAS
+        </h2>
+
+        <p className='relative font-extrabold cursor-pointer font-montserrat w-fit group'>
+          VER TODAS LAS MARCAS
+          <span className='absolute bottom-[-8px] left-0 rounded-sm w-0 h-[6px] bg-[#f24040] transition-all duration-300 group-hover:w-full' />
+        </p>
       </div>
 
-      <div className='flex gap-10 flex-wrap items-center'>
+      <div className='grid grid-cols-[repeat(auto-fit,minmax(110px,1fr))] w-full gap-y-[0px] gap-x-[40px]'>
         {BRANDS.map((brand, index) => (
-          <img key={index} src={brand} alt={`Brand ${index + 1}`} className='w-36' />
+          <img
+            key={index}
+            src={brand}
+            alt={`Brand ${index + 1}`}
+            className='w-full transition-all duration-300 transform cursor-pointer hover:scale-110'
+          />
         ))}
       </div>
     </section>
