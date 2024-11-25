@@ -72,6 +72,13 @@ const Footer = () => {
               </li>
             ))}
           </ul>
+          <ul className='flex items-center justify-center gap-6'>
+            {SOCIAL_MEDIA.map(({ image, alt }) => (
+              <li key={alt}>
+                <img src={image} alt={alt} className='w-[45px] rounded-md cursor-pointer' />
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </footer>
