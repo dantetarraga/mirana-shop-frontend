@@ -48,15 +48,15 @@ const TOYS = [
 const RecommendedSection = () => {
   return (
     <section className='h-[450px]'>
-      <h3 className='uppercase text-center text-4xl font-extrabold'>Recomendados para ti</h3>
+      <h3 className='text-4xl font-extrabold text-center uppercase'>Recomendados para ti</h3>
       <Carousel>
         {TOYS.map((toy, index) => (
           <div key={index} className='w-[250px] space-y-4 flex items-center flex-col'>
             <img src={toy.image} alt={toy.name} className='w-[100px] object-cover' />
             <div className='p-4 bg-gray-100'>
               <h3 className='text-lg font-bold'>{toy.name}</h3>
-              <p className='text-sm text-gray-500 mt-1'>{toy.type}</p>
-              <p className='text-sm text-gray-500 mt-1'>${toy.price}</p>
+              <p className='mt-1 text-sm text-gray-500'>{toy.type}</p>
+              <p className='mt-1 text-sm text-gray-500'>${toy.price}</p>
             </div>
           </div>
         ))}

@@ -9,7 +9,7 @@ const BRANDS = [
   '/brands/8.svg'
 ]
 
-const BrandGallery = () => {
+const BrandGallerySection = () => {
   return (
     <section className='relative z-10 flex items-center gap-[35px] text-white font-montserrat mt-8'>
       <div className='-z-10 absolute bg-gray-900 w-[350px] h-[350px] -left-[65px] -rotate-[10deg]' />
@@ -39,4 +39,4 @@ const BrandGallery = () => {
   )
 }
 
-export default BrandGallery
+export default BrandGallerySection

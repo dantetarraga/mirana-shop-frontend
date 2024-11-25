@@ -16,7 +16,7 @@ const slides = [
   }
 ]
 
-const ProductCarousel = () => {
+const ProductCarouselSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   return (
@@ -30,13 +30,13 @@ const ProductCarousel = () => {
             <img
               src={slide.image}
               alt={slide.title}
-              className='w-full h-full object-cover'
+              className='object-cover w-full h-full'
             />
 
-            <div className='absolute bottom-0 inset-x-0 mb-10 flex flex-col items-center justify-center text-white p-8'>
-              <h2 className='text-4xl font-bold mb-4'>{slide.title}</h2>
-              <p className='text-lg mb-6'>{slide.description}</p>
-              <button className='bg-red-600 px-6 py-3 rounded-md hover:bg-red-500'>
+            <div className='absolute inset-x-0 bottom-0 flex flex-col items-center justify-center p-8 mb-10 text-white'>
+              <h2 className='mb-4 text-4xl font-bold'>{slide.title}</h2>
+              <p className='mb-6 text-lg'>{slide.description}</p>
+              <button className='px-6 py-3 bg-red-600 rounded-md hover:bg-red-500'>
                 PRE-ORDER NOW
               </button>
             </div>
@@ -44,7 +44,7 @@ const ProductCarousel = () => {
         ))}
       </div>
 
-      <div className='absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2'>
+      <div className='absolute flex space-x-2 transform -translate-x-1/2 bottom-4 left-1/2'>
         {slides.map((_, index) => (
           <button
             key={index}
@@ -59,4 +59,4 @@ const ProductCarousel = () => {
   )
 }
 
-export default ProductCarousel
+export default ProductCarouselSection

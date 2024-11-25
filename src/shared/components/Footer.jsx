@@ -7,7 +7,7 @@ const Footer = () => {
           <p>Registrate para ser el primero en enterarte de nuestras novedades, promociones especiales y esclusivas online.</p>
 
           <form className=''>
-            <input className='relative rounded-md p-2' type='email' placeholder='Ingresa tu correo electrónico' />
+            <input className='relative p-2 rounded-md' type='email' placeholder='Ingresa tu correo electrónico' />
             <button className='absolute' />
           </form>
         </div>

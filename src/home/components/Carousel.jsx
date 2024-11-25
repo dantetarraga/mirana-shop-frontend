@@ -8,7 +8,7 @@ const Carousel = ({ children }) => {
   const prevSlide = () => setCurrentIndex((prevIndex) => (prevIndex - 1 + totalSlides) % totalSlides)
 
   return (
-    <div className='relative p-6 w-full h-auto'>
+    <div className='relative w-full h-auto p-6'>
       <div className='absolute w-full overflow-hidden'>
         <div
           className='flex gap-6 transition-transform duration-700'
@@ -19,17 +19,17 @@ const Carousel = ({ children }) => {
       </div>
 
       {/* Botones de navegación */}
-      <div className='absolute z-20 top-1/2 transform -translate-y-1/2 flex space-x-4'>
+      <div className='absolute z-20 flex space-x-4 transform -translate-y-1/2 top-1/2'>
         <button
           onClick={prevSlide}
-          className='w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-md'
+          className='flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-md'
         >
           Prev
         </button>
 
         <button
           onClick={nextSlide}
-          className='w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-md'
+          className='flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-md'
         >
           Next
         </button>

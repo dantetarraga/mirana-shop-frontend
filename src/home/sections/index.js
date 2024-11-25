@@ -1,0 +1,6 @@
+export { default as HeroSection } from './HeroSection'
+export { default as BrandGallerySection } from './BrandGallerySection'
+export { default as CollectItAllSection } from './CollectItAllSection'
+export { default as LatestReleasesSection } from './LatestReleasesSection'
+export { default as RecommendedSection } from './RecommendedSection'
+export { default as ProductCarouselSection } from './ProductCarouselSection'
