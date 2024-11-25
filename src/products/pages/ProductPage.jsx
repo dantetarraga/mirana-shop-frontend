@@ -1,6 +1,6 @@
 const ProductPage = () => {
   return (
-    <div>ProductPage</div>
+    <div className='pt-[125px]'>ProductPage</div>
   )
 }
 
