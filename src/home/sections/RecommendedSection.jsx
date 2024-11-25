@@ -47,13 +47,13 @@ const TOYS = [
 
 const RecommendedSection = () => {
   return (
-    <section className='h-[450px]'>
-      <h3 className='text-4xl font-extrabold text-center uppercase'>Recomendados para ti</h3>
-      <Carousel>
+    <section>
+      <Carousel title='Recomendados para ti' visibleItems={5} slideDistance={370}>
         {TOYS.map((toy, index) => (
-          <div key={index} className='w-[250px] space-y-4 flex items-center flex-col'>
-            <img src={toy.image} alt={toy.name} className='w-[100px] object-cover' />
-            <div className='p-4 bg-gray-100'>
+          <div key={index} className='w-[320px] space-y-4 flex items-center flex-col cursor-pointer'>
+            <img src={toy.image} alt={toy.name} className='w-[130px] object-cover' />
+
+            <div className='w-full p-4 text-center bg-gray-100 h-[130px]'>
               <h3 className='text-lg font-bold'>{toy.name}</h3>
               <p className='mt-1 text-sm text-gray-500'>{toy.type}</p>
               <p className='mt-1 text-sm text-gray-500'>${toy.price}</p>

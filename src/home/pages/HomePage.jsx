@@ -2,7 +2,8 @@ import {
   BrandGallerySection,
   CollectItAllSection,
   HeroSection,
-  LatestReleasesSection
+  LatestReleasesSection,
+  RecommendedSection
 } from '../sections'
 
 const Homepage = () => {
@@ -17,6 +18,8 @@ const Homepage = () => {
       </div>
 
       <LatestReleasesSection />
+
+      <RecommendedSection />
     </>
   )
 }
