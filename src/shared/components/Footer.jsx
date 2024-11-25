@@ -63,19 +63,13 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className='space-y-6 [&>ul]:space-y-5'>
+        <div className='space-y-6'>
           <h4 className='text-center uppercase'>Conocenos más</h4>
-          <ul className='flex flex-col items-center'>
-            {SOCIAL_MEDIA.map(({ image, alt }) => (
-              <li key={alt}>
-                <img src={image} alt={alt} className='w-[45px] rounded-md cursor-pointer' />
-              </li>
-            ))}
-          </ul>
+
           <ul className='flex items-center justify-center gap-6'>
             {SOCIAL_MEDIA.map(({ image, alt }) => (
               <li key={alt}>
-                <img src={image} alt={alt} className='w-[45px] rounded-md cursor-pointer' />
+                <img src={image} alt={alt} className='w-[40px] rounded-md cursor-pointer' />
               </li>
             ))}
           </ul>
