@@ -6,7 +6,7 @@ import {
   RecommendedSection
 } from '../sections'
 
-const Homepage = () => {
+const HomePage = () => {
   return (
     <>
       <HeroSection />
@@ -24,4 +24,4 @@ const Homepage = () => {
   )
 }
 
-export default Homepage
+export default HomePage

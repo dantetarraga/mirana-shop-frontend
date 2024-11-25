@@ -50,8 +50,8 @@ const RecommendedSection = () => {
     <section>
       <Carousel title='Recomendados para ti' visibleItems={5} slideDistance={370}>
         {TOYS.map((toy, index) => (
-          <div key={index} className='w-[320px] space-y-4 flex items-center flex-col cursor-pointer'>
-            <img src={toy.image} alt={toy.name} className='w-[130px] object-cover' />
+          <div key={index} className='w-[320px] space-y-4 flex items-center flex-col cursor-pointer group'>
+            <img src={toy.image} alt={toy.name} className='w-[130px] object-cover group-hover:drop-shadow-[0_0_10px_rgba(0,0,0,.7)]' />
 
             <div className='w-full p-4 text-center bg-gray-100 h-[130px]'>
               <h3 className='text-lg font-bold'>{toy.name}</h3>

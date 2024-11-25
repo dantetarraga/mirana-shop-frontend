@@ -24,7 +24,7 @@ const SOCIAL_MEDIA = [
 
 const Footer = () => {
   return (
-    <footer className='text-white h-[600px] flex items-center justify-center bg-[#101820] clip-banner-inverse'>
+    <footer className='text-white flex items-center justify-center bg-[#101820] clip-banner-inverse min-h-[450px] '>
       <div className='grid grid-cols-4 gap-[50px] w-[1250px] [&>div>h4]:font-black [&>div>h4]:text-2xl [&>div>h4]:tracking-tighter'>
         <div className='space-y-2 [&>ul]:space-y-2'>
           <h4 className='uppercase'>Registrate ahora y empieza a ahorrar</h4>

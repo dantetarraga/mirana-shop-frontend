@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 import { MainLayout } from '@/shared'
-import Homepage from '../home/pages/HomePage'
+import HomePage from '../home/pages/HomePage'
+import { productRouter } from '../products/router/productRouter'
 
 const router = [
   {
@@ -9,8 +10,9 @@ const router = [
     children: [
       {
         index: true,
-        element: <Homepage />
-      }
+        element: <HomePage />
+      },
+      ...productRouter
     ]
   }
 ]
