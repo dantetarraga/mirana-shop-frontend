@@ -1,6 +1,6 @@
 import { Search, ShoppingCart, User } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import { NavLink, useLocation, useNavigate } from 'react-router-dom'
+import { NavLink, useLocation, useNavigate } from 'react-router'
 
 const ITEMS_NAVBAR = [
   { href: '/products', label: 'Productos' },
@@ -64,14 +64,14 @@ const Navbar = () => {
       </nav>
 
       <div className='flex justify-end flex-grow gap-5 basis-0'>
-        <ul className='flex gap-5'>
-          <li className='p-2 rounded cursor-pointer hover:bg-gray-500'>
+        <ul className='flex gap-5 [&>*]:cursor-pointer [&>*]:rounded [&>*]:p-[8px]'>
+          <li className='hover:bg-slate-500'>
             <Search />
           </li>
-          <li className='p-2 rounded cursor-pointer hover:bg-gray-500'>
+          <li className='hover:bg-slate-500'>
             <User />
           </li>
-          <li className='p-2 rounded cursor-pointer hover:bg-gray-500'>
+          <li className='hover:bg-slate-500'>
             <ShoppingCart />
           </li>
         </ul>
