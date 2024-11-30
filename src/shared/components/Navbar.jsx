@@ -51,7 +51,7 @@ const Navbar = () => {
                     <span
                       className={`bottom-[-8px] left-0 absolute rounded-sm w-0 h-[4px] bg-[#02A8FE] ${
                         isActive
-                          ? 'w-full bg-[#f24040]'
+                          ? 'w-full bg-[#02A8FE]'
                           : 'transition-all duration-300 group-hover:w-full'
                       }`}
                     />
