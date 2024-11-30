@@ -1,6 +1,7 @@
 import { Menu, Search, ShoppingCart, User } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { NavLink, useLocation, useNavigate } from 'react-router'
+import useSidebarStore from '@/store/sidebar/useSidebarStore'
 
 const ITEMS_NAVBAR = [
   { href: '/products', label: 'Productos' },
@@ -12,14 +13,22 @@ const ITEMS_NAVBAR = [
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+  const { toggleSidebar } = useSidebarStore()
   const location = useLocation()
   const navigate = useNavigate()
   const backgroundClass =
-    isScrolled || location.pathname !== '/' ? 'bg-[#00002A]' : 'bg-transparent'
+    isScrolled || location.pathname !== '/' || isMobile
+      ? 'bg-[#00002A]'
+      : 'bg-transparent'
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', handleResize)
+    }
   }, [])
 
   const handleScroll = () => {
@@ -27,11 +36,16 @@ const Navbar = () => {
     else setIsScrolled(false)
   }
 
+  const handleResize = () => setIsMobile(window.matchMedia('(max-width: 640px)').matches)
+
   return (
     <header
       className={`fixed top-0 z-30 flex items-center w-full pr-[16px] md:px-[48px] h-[65px] text-white ${backgroundClass}`}
     >
-      <button className='bg-[#02A8FE] h-full flex items-center justify-center w-[60px] md:hidden'>
+      <button
+        className='bg-[#02A8FE] h-full flex items-center justify-center w-[60px] md:hidden'
+        onClick={toggleSidebar}
+      >
         <Menu size={32} />
       </button>
 

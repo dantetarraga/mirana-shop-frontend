@@ -20,7 +20,7 @@ const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   return (
-    <div className='relative w-full overflow-hidden'>
+    <div className='relative w-full overflow-hidden pt-[65px]'>
       <div
         className='flex transition-transform duration-700'
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
