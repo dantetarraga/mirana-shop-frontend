@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const slides = [
   {
@@ -18,9 +18,17 @@ const slides = [
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  const handleResize = () => setIsMobile(window.matchMedia('(max-width: 640px)').matches)
 
   return (
-    <div className='relative w-full overflow-hidden pt-[65px]'>
+    <div className={`relative w-full overflow-hidden ${isMobile && 'pt-[65px]'}`}>
       <div
         className='flex transition-transform duration-700'
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}

@@ -3,7 +3,7 @@ import { Navbar, Footer, Sidebar } from '../'
 
 const MainLayout = () => {
   return (
-    <div className='relative flex flex-col h-screen overflow-x-hidden'>
+    <div className='relative flex flex-col h-screen'>
       <Navbar />
       <Sidebar />
 
