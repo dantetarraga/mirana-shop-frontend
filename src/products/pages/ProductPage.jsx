@@ -2,7 +2,7 @@ import { AlignLeft, Heart, ShoppingCart } from 'lucide-react'
 
 const ProductPage = () => {
   return (
-    <section className='pt-[149px] px-[90px] space-y-[16px]'>
+    <section className='pt-[32px] md:pt-[149px] px-[16px] md:px-[90px] space-y-[16px]'>
       <h3 className='text-2xl font-black uppercase'>Productos</h3>
 
       <div className='inline-flex gap-[8px] cursor-pointer'>

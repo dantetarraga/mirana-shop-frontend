@@ -7,7 +7,7 @@
 @tailwind utilities;
 
 body {
-  @apply font-montserrat 
+  @apply font-montserrat box-border
 }
 
 @layer utilities {

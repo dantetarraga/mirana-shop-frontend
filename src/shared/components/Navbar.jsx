@@ -1,4 +1,4 @@
-import { Search, ShoppingCart, User } from 'lucide-react'
+import { Menu, Search, ShoppingCart, User } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { NavLink, useLocation, useNavigate } from 'react-router'
 
@@ -29,18 +29,22 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 z-30 flex items-center w-full px-[48px] h-[75px] text-white ${backgroundClass}`}
+      className={`fixed top-0 z-30 flex items-center w-full pr-[16px] md:px-[48px] h-[65px] text-white ${backgroundClass}`}
     >
+      <button className='bg-[#02A8FE] h-full flex items-center justify-center w-[60px] md:hidden'>
+        <Menu size={32} />
+      </button>
+
       <div className='flex flex-grow basis-0'>
         <img
           src='logo-miranashop.svg'
           alt='Mirana Shop'
-          className='w-[140px] cursor-pointer'
+          className='w-[100px] md:w-[120px] cursor-pointer'
           onClick={() => navigate('/')}
         />
       </div>
 
-      <nav className='text-lg font-bold font-roboto-condensed'>
+      <nav className='hidden text-sm font-bold md:text-lg md:block font-roboto-condensed'>
         <ul className='flex gap-16'>
           {ITEMS_NAVBAR.map((item) => (
             <li key={item.href}>
@@ -63,16 +67,16 @@ const Navbar = () => {
         </ul>
       </nav>
 
-      <div className='flex justify-end flex-grow gap-5 basis-0'>
-        <ul className='flex gap-5 [&>*]:cursor-pointer [&>*]:rounded [&>*]:p-[8px]'>
+      <div className='flex justify-end flex-grow basis-0'>
+        <ul className='flex gap-[8px] [&>*]:cursor-pointer [&>*]:rounded md:[&>*]:p-[8px] [&>*]:p-[4px]'>
           <li className='hover:bg-slate-500'>
-            <Search />
+            <Search size={20} />
           </li>
           <li className='hover:bg-slate-500'>
-            <User />
+            <User size={20} />
           </li>
           <li className='hover:bg-slate-500'>
-            <ShoppingCart />
+            <ShoppingCart size={20} />
           </li>
         </ul>
       </div>
