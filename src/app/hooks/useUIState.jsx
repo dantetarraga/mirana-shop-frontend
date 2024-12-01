@@ -12,6 +12,7 @@ const useUIState = () => {
   const handleResize = () => setIsMobile(window.matchMedia('(max-width: 640px)').matches)
 
   useEffect(() => {
+    handleResize()
     window.addEventListener('scroll', handleScroll)
     window.addEventListener('resize', handleResize)
     return () => {
@@ -24,6 +25,8 @@ const useUIState = () => {
     isScrolled || location.pathname !== '/' || isMobile
       ? 'bg-[#00002A]'
       : 'bg-transparent'
+
+  console.log('isScrolled', isMobile)
 
   return {
     isScrolled,

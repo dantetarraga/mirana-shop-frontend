@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import useUIState from '../../../app/hooks/useUIState'
 
 const slides = [
   {
@@ -18,14 +19,7 @@ const slides = [
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
-
-  const handleResize = () => setIsMobile(window.matchMedia('(max-width: 640px)').matches)
+  const { isMobile } = useUIState()
 
   return (
     <div className={`relative w-full overflow-hidden ${isMobile && 'pt-[65px]'}`}>
