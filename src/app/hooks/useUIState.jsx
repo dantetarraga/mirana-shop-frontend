@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router'
-import useUIStore from '../store/useUiStore'
+import useUIStore from '../store/useUIStore'
 
 const useUIState = () => {
   const location = useLocation()
