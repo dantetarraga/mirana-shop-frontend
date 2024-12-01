@@ -1,7 +1,6 @@
 import { Menu, Search, ShoppingCart, User } from 'lucide-react'
-import { useEffect, useState } from 'react'
-import { NavLink, useLocation, useNavigate } from 'react-router'
-import useSidebarStore from '@/app/store/sidebar/useSidebarStore'
+import { NavLink, useNavigate } from 'react-router'
+import useUIState from '@/app/hooks/useUIState'
 
 const ITEMS_NAVBAR = [
   { href: '/products', label: 'Productos' },
@@ -12,31 +11,8 @@ const ITEMS_NAVBAR = [
 ]
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
-  const { toggleSidebar } = useSidebarStore()
-  const location = useLocation()
+  const { toggleSidebar, backgroundClass } = useUIState()
   const navigate = useNavigate()
-  const backgroundClass =
-    isScrolled || location.pathname !== '/' || isMobile
-      ? 'bg-[#00002A]'
-      : 'bg-transparent'
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-    window.addEventListener('resize', handleResize)
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
-
-  const handleScroll = () => {
-    if (window.scrollY > 0) setIsScrolled(true)
-    else setIsScrolled(false)
-  }
-
-  const handleResize = () => setIsMobile(window.matchMedia('(max-width: 640px)').matches)
 
   return (
     <header

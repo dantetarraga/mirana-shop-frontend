@@ -10,7 +10,7 @@ const ProductPage = () => {
         <span>Ver filtros</span>
       </div>
 
-      <div className='grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-[20px]'>
+      <div className='grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-[20px]'>
         {Array(15)
           .fill()
           .map((_, index) => (

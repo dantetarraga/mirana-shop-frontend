@@ -1,6 +1,6 @@
-import useSidebarStore from '@/app/store/sidebar/useSidebarStore'
 import { Play, X } from 'lucide-react'
 import { useNavigate } from 'react-router'
+import useUIState from '@/app/hooks/useUIState'
 
 const ITEMS_NAVBAR = [
   { href: '/products', label: 'Productos' },
@@ -11,7 +11,7 @@ const ITEMS_NAVBAR = [
 ]
 
 const Sidebar = () => {
-  const { toggleSidebar, isOpenSidebar } = useSidebarStore()
+  const { toggleSidebar, isOpenSidebar } = useUIState()
   const navigate = useNavigate()
 
   const handleNavigate = (to) => {
