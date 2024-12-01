@@ -1,4 +1,4 @@
-import useSidebarStore from '@/store/sidebar/useSidebarStore'
+import useSidebarStore from '@/app/store/sidebar/useSidebarStore'
 import { Play, X } from 'lucide-react'
 import { useNavigate } from 'react-router'
 

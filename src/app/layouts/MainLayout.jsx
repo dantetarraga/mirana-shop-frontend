@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router'
-import { Navbar, Footer, Sidebar } from '../'
+import { Footer, Navbar, Sidebar } from '@/shared'
 
 const MainLayout = () => {
   return (

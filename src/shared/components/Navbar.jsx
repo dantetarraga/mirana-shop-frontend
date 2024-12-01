@@ -1,7 +1,7 @@
 import { Menu, Search, ShoppingCart, User } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { NavLink, useLocation, useNavigate } from 'react-router'
-import useSidebarStore from '@/store/sidebar/useSidebarStore'
+import useSidebarStore from '@/app/store/sidebar/useSidebarStore'
 
 const ITEMS_NAVBAR = [
   { href: '/products', label: 'Productos' },

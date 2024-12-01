@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router'
-import { MainLayout } from '@/shared'
-import HomePage from '@/home/pages/HomePage'
-import { productRouter } from '@/products/router/productRouter'
+import HomePage from '@/features/home/pages/HomePage'
+import { productRouter } from '@/features/products/router/productRouter'
+import MainLayout from '../layouts/MainLayout'
 
 const router = [
   {
