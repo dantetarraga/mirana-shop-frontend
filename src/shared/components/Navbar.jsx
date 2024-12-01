@@ -16,10 +16,10 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 z-30 flex items-center w-full pr-[16px] md:px-[48px] h-[65px] text-white ${backgroundClass}`}
+      className={`fixed top-0 z-30 flex items-center w-full pr-[16px] lg:px-[48px] h-[65px] text-white ${backgroundClass}`}
     >
       <button
-        className='bg-[#02A8FE] h-full flex items-center justify-center w-[60px] md:hidden'
+        className='bg-[#02A8FE] h-full flex items-center justify-center w-[60px] lg:hidden'
         onClick={toggleSidebar}
       >
         <Menu size={32} />
@@ -34,7 +34,7 @@ const Navbar = () => {
         />
       </div>
 
-      <nav className='hidden text-sm font-bold md:text-lg md:block font-roboto-condensed'>
+      <nav className='hidden text-sm font-bold md:text-lg lg:block font-roboto-condensed'>
         <ul className='flex gap-16'>
           {ITEMS_NAVBAR.map((item) => (
             <li key={item.href}>

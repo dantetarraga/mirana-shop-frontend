@@ -10,6 +10,14 @@ body {
   @apply font-montserrat box-border
 }
 
+.footer-heading {
+  @apply lg:text-2xl tracking-tighter font-black uppercase;
+}
+
+.footer-content {
+  @apply text-sm;
+}
+
 @layer utilities {
   .clip-banner {
     clip-path: polygon(0 0, 100% 13%, 100% 100%, 0% 100%);

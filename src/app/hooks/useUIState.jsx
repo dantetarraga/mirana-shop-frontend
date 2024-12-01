@@ -3,10 +3,10 @@ import useUIStore from '../store/useUiStore'
 import { useLocation } from 'react-router'
 
 const useUIState = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
-  const { toggleSidebar, isOpenSidebar } = useUIStore()
   const location = useLocation()
+  const [isMobile, setIsMobile] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const { toggleSidebar, isOpenSidebar } = useUIStore()
 
   const handleScroll = () => setIsScrolled(window.scrollY > 50)
   const handleResize = () => setIsMobile(window.matchMedia('(max-width: 640px)').matches)
