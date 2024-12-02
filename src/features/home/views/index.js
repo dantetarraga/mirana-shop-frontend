@@ -1,0 +1,6 @@
+export { default as HeroView } from './HeroView'
+export { default as BrandGalleryView } from './BrandGalleryView'
+export { default as CollectItAllView } from './CollectItAllView'
+export { default as LatestReleasesView } from './LatestReleasesView'
+export { default as RecommendedView } from './RecommendedView'
+export { default as ProductCarouselView } from './ProductCarouselView'

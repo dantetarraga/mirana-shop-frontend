@@ -1,25 +1,25 @@
 import {
-  BrandGallerySection,
-  CollectItAllSection,
-  HeroSection,
-  LatestReleasesSection,
-  RecommendedSection
-} from '../sections'
+  BrandGalleryView,
+  CollectItAllView,
+  HeroView,
+  LatestReleasesView,
+  RecommendedView
+} from '../views'
 
 const HomePage = () => {
   return (
     <>
-      <HeroSection />
+      <HeroView />
 
-      <div className='mx-auto max-w-[1250px]'>
-        <BrandGallerySection />
+      <section className='mx-auto max-w-[1250px]'>
+        <BrandGalleryView />
+        <CollectItAllView />
+      </section>
 
-        <CollectItAllSection />
-      </div>
-
-      <LatestReleasesSection />
-
-      <RecommendedSection />
+      <section>
+        <LatestReleasesView />
+        <RecommendedView />
+      </section>
     </>
   )
 }

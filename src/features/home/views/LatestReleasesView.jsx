@@ -1,18 +1,24 @@
-import Carousel from '../components/Carousel'
+import { SwiperSlide } from 'swiper/react'
+import CarouselV2 from '../components/CarouselV2'
 
 const Card = ({ image, title, description, link }) => {
   return (
-    <div className='relative cursor-pointer group bg-white overflow-hidden w-[460px] h-[460px] border-[9px] border-black'>
+    <div className='relative cursor-pointer group bg-white overflow-hidden lg:w-[460px] lg:h-[460px] border-[9px] border-black'>
       <img
         src={image}
         alt={title}
         className='object-cover w-full transition-transform duration-500 ease-in-out transform group-hover:scale-105'
       />
 
-      <div className='absolute bottom-0 w-full h-40 p-4 bg-black bg-opacity-80'>
-        <h3 className='text-lg font-bold text-white'>{title}</h3>
-        <p className='mt-1 text-sm text-gray-200'>{description}</p>
-        <a href={link} className='inline-block mt-2 font-bold text-red-500'>
+      <div className='absolute bottom-0 w-full p-2 text-center bg-black lg:h-40 bg-opacity-80'>
+        <h3 className='text-sm font-bold text-white lg:text-lg'>{title}</h3>
+        <p className='hidden mt-1 text-sm text-gray-200 lg:block'>
+          {description}
+        </p>
+        <a
+          href={link}
+          className='hidden mt-2 font-bold text-red-500 lg:inline-block'
+        >
           Pre-Order Now
         </a>
       </div>
@@ -23,16 +29,15 @@ const Card = ({ image, title, description, link }) => {
 const cards = [
   {
     image: '/20.avif',
-    title: 'Gill Beast: Namazu Vinyl Collectible',
+    title: 'Gill Beast: Namazu Vinyl',
     description:
       'Sideshow and Acro present the Gill Beast: Namazu Vinyl Collectible...',
     link: '#'
   },
   {
     image: '/20.avif',
-    title: 'Harley Quinn™ & The Joker™: Lawless Love Art Print',
-    description:
-      '“You don’t have to be crazy to be in love... but it helps.”',
+    title: 'Harley Quinn™ & The Joker™',
+    description: '“You don’t have to be crazy to be in love... but it helps.”',
     link: '#'
   },
   {
@@ -67,10 +72,10 @@ const cards = [
   }
 ]
 
-const LatestReleasesSection = () => {
+const LatestReleasesView = () => {
   return (
     <section>
-      <Carousel title='Últimos lanzamientos' hasClippedBackground slideDistance={574} visibleItems={4}>
+      {/* <Carousel title='Últimos lanzamientos' hasClippedBackground slideDistance={574} visibleItems={4}>
         {cards.map((card, index) => (
           <Card
             key={index}
@@ -80,9 +85,29 @@ const LatestReleasesSection = () => {
             link={card.link}
           />
         ))}
-      </Carousel>
+      </Carousel> */}
+
+      <CarouselV2
+        title='Últimos lanzamientos'
+        visibleItems={1}
+        hasClippedBackground
+        spaceBetween={24}
+        slidesPerView={1.6}
+      >
+        {cards.map((card, index) => (
+          <SwiperSlide key={index} className='flex justify-center'>
+            <Card
+              key={index}
+              image={card.image}
+              title={card.title}
+              description={card.description}
+              link={card.link}
+            />
+          </SwiperSlide>
+        ))}
+      </CarouselV2>
     </section>
   )
 }
 
-export default LatestReleasesSection
+export default LatestReleasesView

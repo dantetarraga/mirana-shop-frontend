@@ -1,4 +1,5 @@
-import Carousel from '../components/Carousel'
+import { SwiperSlide } from 'swiper/react'
+import CarouselV2 from '../components/CarouselV2'
 
 const TOYS = [
   {
@@ -45,24 +46,26 @@ const TOYS = [
   }
 ]
 
-const RecommendedSection = () => {
+const RecommendedView = () => {
   return (
     <section>
-      <Carousel title='Recomendados para ti' visibleItems={5} slideDistance={370}>
+      <CarouselV2 title='Recommended for you' slidesPerView={2.6}>
         {TOYS.map((toy, index) => (
-          <div key={index} className='w-[320px] space-y-4 flex items-center flex-col cursor-pointer group'>
-            <img src={toy.image} alt={toy.name} className='w-[130px] object-cover group-hover:drop-shadow-[0_0_10px_rgba(0,0,0,.7)]' />
+          <SwiperSlide key={index} className='flex justify-center'>
+            <div key={index} className='flex flex-col items-center space-y-4 cursor-pointer group'>
+              <img src={toy.image} alt={toy.name} className='w-[70%] object-cover group-hover:drop-shadow-[0_0_10px_rgba(0,0,0,.7)]' />
 
-            <div className='w-full p-4 text-center bg-gray-100 h-[130px]'>
-              <h3 className='text-lg font-bold'>{toy.name}</h3>
-              <p className='mt-1 text-sm text-gray-500'>{toy.type}</p>
-              <p className='mt-1 text-sm text-gray-500'>${toy.price}</p>
+              <div className='w-full h-auto p-2 text-center bg-gray-100 lg:p-4'>
+                <h3 className='text-sm font-bold lg:text-lg'>{toy.name}</h3>
+                <p className='mt-1 text-sm text-gray-500'>{toy.type}</p>
+                <p className='mt-1 text-sm text-gray-500'>${toy.price}</p>
+              </div>
             </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </Carousel>
+      </CarouselV2>
     </section>
   )
 }
 
-export default RecommendedSection
+export default RecommendedView

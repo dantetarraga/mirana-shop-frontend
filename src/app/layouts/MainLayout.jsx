@@ -5,7 +5,7 @@ const MainLayout = () => {
   return (
     <div className='relative flex flex-col h-screen'>
       <Navbar />
-      <Sidebar />
+      {/* <Sidebar /> */}
 
       <main className='flex-grow'>
         <Outlet />

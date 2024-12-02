@@ -14,6 +14,8 @@ const Navbar = () => {
   const { toggleSidebar, backgroundClass } = useUIState()
   const navigate = useNavigate()
 
+  console.log('Navbar render')
+
   return (
     <header
       className={`fixed top-0 z-30 flex items-center w-full pr-[16px] lg:px-[48px] h-[65px] text-white ${backgroundClass}`}

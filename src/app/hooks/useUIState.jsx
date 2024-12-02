@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useLocation } from 'react-router'
 import useUIStore from '../store/useUIStore'
 
-const useUIState = () => {
+export const useUIState = () => {
   const location = useLocation()
   const [isMobile, setIsMobile] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -21,22 +21,20 @@ const useUIState = () => {
     }
   }, [])
 
-  const backgroundClass =
-    isScrolled || location.pathname !== '/' || isMobile
-      ? 'bg-[#00002A]'
-      : 'bg-transparent'
-
-  console.log('isScrolled', isMobile)
+  const backgroundClass = useMemo(
+    () =>
+      isScrolled || location.pathname !== '/' || isMobile
+        ? 'bg-[#00002A]'
+        : 'bg-transparent',
+    [isScrolled, location.pathname, isMobile]
+  )
 
   return {
     isScrolled,
     isMobile,
     toggleSidebar,
     backgroundClass,
-    isOpenSidebar,
-
-    handleScroll,
-    handleResize
+    isOpenSidebar
   }
 }
 

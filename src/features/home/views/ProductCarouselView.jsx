@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react'
-import useUIState from '../../../app/hooks/useUIState'
+import { useState } from 'react'
 
 const slides = [
   {
@@ -17,12 +16,11 @@ const slides = [
   }
 ]
 
-const HeroSection = () => {
+const ProductCarouselView = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
-  const { isMobile } = useUIState()
 
   return (
-    <div className={`relative w-full overflow-hidden ${isMobile && 'pt-[65px]'}`}>
+    <div className='w-full overflow-hidden'>
       <div
         className='flex transition-transform duration-700'
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -61,4 +59,4 @@ const HeroSection = () => {
   )
 }
 
-export default HeroSection
+export default ProductCarouselView
