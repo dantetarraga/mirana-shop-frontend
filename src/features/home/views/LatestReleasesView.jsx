@@ -82,7 +82,7 @@ const LatestReleasesView = () => {
       visibleItems={1}
       hasClippedBackgroundInverted
       spaceBetween={12}
-      slidesPerView={1.3}
+      slidesPerView={1.7}
       breakpoints={breakpoints}
     >
       {cards.map((card, index) => (

@@ -48,7 +48,7 @@ const TOYS = [
 
 const RecommendedView = () => {
   const breakpoints = {
-    768: { slidesPerView: 3.65 },
+    768: { slidesPerView: 3.75 },
     1024: { slidesPerView: 6.2 }
   }
 

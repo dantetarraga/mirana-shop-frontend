@@ -36,7 +36,7 @@ const HeroView = () => {
         {slides.map((slide) => (
           <div key={slide.id} className='relative w-full min-w-full'>
             <img
-              src={screenSize === 'tablet' || screenSize === 'desktop' ? slide.imageDesktop : slide.imageMobile}
+              src={screenSize === 'mobile' ? slide.imageMobile : slide.imageDesktop}
               alt={slide.title}
               className='object-center w-full'
             />
