@@ -1,25 +1,24 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useLocation } from 'react-router'
 import useUIStore from '../store/useUIStore'
 
 export const useUIState = () => {
   const location = useLocation()
-  // const [isMobile, setIsMobile] = useState(false)
-  const [screenSize, setScreenSize] = useState('desktop')
   const [isScrolled, setIsScrolled] = useState(false)
+  const [screenSize, setScreenSize] = useState('desktop')
   const { toggleSidebar, isOpenSidebar } = useUIStore()
 
-  const handleScroll = () => setIsScrolled(window.scrollY > 50)
-  const handleResize = () => {
+  const handleScroll = useCallback(() => setIsScrolled(window.scrollY > 50), [])
+  const handleResize = useCallback(() => {
     const width = window.innerWidth
-    const screenSize = width <= 640
-      ? 'mobile'
-      : width <= 1024
-        ? 'tablet'
-        : 'desktop'
-
-    setScreenSize(screenSize)
-  }
+    const newScreenSize =
+      width <= 640
+        ? 'mobile'
+        : width <= 1024
+          ? 'tablet'
+          : 'desktop'
+    setScreenSize(newScreenSize)
+  }, [])
 
   useEffect(() => {
     handleResize()
@@ -29,7 +28,7 @@ export const useUIState = () => {
       window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('resize', handleResize)
     }
-  }, [])
+  }, [handleResize, handleScroll])
 
   const backgroundClass = useMemo(
     () =>

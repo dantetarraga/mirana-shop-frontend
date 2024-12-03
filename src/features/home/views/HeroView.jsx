@@ -4,18 +4,16 @@ import useUIState from '@/app/hooks/useUIState'
 const slides = [
   {
     id: 1,
-    imageDesktop: '/banners/Chucky.webp',
+    imageDesktop: '/ironMan-tabled.jpg',
     imageMobile: '/ironMan-mobil.jpg',
-    imageTablet: '/ironMan-tabled.jpg',
     title: 'ALIEN ROMULUS',
     description:
       'Ultimate Scorched Xenomorph 7" Scale Action Figure & Accessory Set'
   },
   {
     id: 2,
-    imageDesktop: '/banners/inferno.jpg',
+    imageDesktop: '/ironMan-tabled.jpg',
     imageMobile: '/ironMan-mobil.jpg',
-    imageTablet: '/ironMan-tabled.jpg',
     title: 'ALIEN MASK SET',
     description: 'Exclusive Collectible Alien Mask & Accessories'
   }
@@ -28,7 +26,7 @@ const HeroView = () => {
   return (
     <div
       className={`relative w-full overflow-hidden ${
-        (screenSize === 'mobile' || screenSize === 'tabled') && 'pt-[64px]'
+        (screenSize === 'tablet' || screenSize === 'mobile') && 'pt-[64px]'
       }`}
     >
       <div
@@ -38,7 +36,7 @@ const HeroView = () => {
         {slides.map((slide) => (
           <div key={slide.id} className='relative w-full min-w-full'>
             <img
-              src={screenSize === 'mobile' ? slide.imageMobile : screenSize === 'tablet' ? slide.imageTablet : slide.imageDesktop}
+              src={screenSize === 'tablet' || screenSize === 'desktop' ? slide.imageDesktop : slide.imageMobile}
               alt={slide.title}
               className='object-center w-full'
             />
