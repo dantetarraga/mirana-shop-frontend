@@ -67,8 +67,11 @@ const Navbar = () => {
           <li className='hover:bg-slate-500'>
             <User size={20} />
           </li>
-          <li className='hover:bg-slate-500'>
+          <li className='relative hover:bg-slate-500'>
             <ShoppingCart size={20} />
+            <span className='absolute grid w-3 h-3 text-center text-white bg-red-600 rounded-full text-[8.5px] -right-[4px] top-[1px] place-content-center font-semibold'>
+              1
+            </span>
           </li>
         </ul>
       </div>

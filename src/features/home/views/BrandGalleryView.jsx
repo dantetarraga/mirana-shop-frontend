@@ -18,7 +18,7 @@ const BRANDS = [
 
 const BrandGalleryView = () => {
   return (
-    <section className='relative z-10 flex flex-col items-center py-12 space-y-4 text-black lg:py-8 lg:mt-8 font-montserrat -top-3'>
+    <section className='relative z-10 flex flex-col items-center py-8 space-y-4 text-black lg:py-8 lg:mt-8 font-montserrat -top-3'>
       {/* <div className='-z-10 absolute bg-gray-900 w-[350px] h-[350px] -left-[65px] -rotate-[10deg]' /> */}
 
       {/* <div className='flex flex-col justify-center gap-[24px]'>
@@ -41,9 +41,9 @@ const BrandGalleryView = () => {
       {/* Swiper Carrusel */}
       <Swiper
         modules={[Pagination, Navigation]}
-        spaceBetween={4}
+        spaceBetween={12}
         slidesPerView={4.6}
-        className='w-full max-w-[900px]'
+        className='w-full'
         breakpoints={{
           320: { slidesPerView: 4.6 }, // Móviles
           480: { slidesPerView: 5.6 } // Tablets pequeñas

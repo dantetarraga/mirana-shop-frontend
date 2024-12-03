@@ -15,7 +15,7 @@ body {
 }
 
 .subsection-heading {
-  @apply text-4xl font-black tracking-tighter text-center uppercase font-montserrat;
+  @apply text-2xl font-black tracking-tighter text-center uppercase md:text-4xl font-montserrat;
 }
 
 .footer-content {
