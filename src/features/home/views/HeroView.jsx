@@ -4,7 +4,7 @@ import useUIState from '@/app/hooks/useUIState'
 const slides = [
   {
     id: 1,
-    imageDesktop: '/ironMan-tabled.jpg',
+    imageDesktop: '/ironMan-tablet.jpg',
     imageMobile: '/ironMan-mobil.jpg',
     title: 'ALIEN ROMULUS',
     description:
@@ -12,7 +12,7 @@ const slides = [
   },
   {
     id: 2,
-    imageDesktop: '/ironMan-tabled.jpg',
+    imageDesktop: '/ironMan-tablet.jpg',
     imageMobile: '/ironMan-mobil.jpg',
     title: 'ALIEN MASK SET',
     description: 'Exclusive Collectible Alien Mask & Accessories'
