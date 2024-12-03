@@ -1,5 +1,5 @@
 import { SwiperSlide } from 'swiper/react'
-import CarouselV2 from '../components/CarouselV2'
+import Carousel from '../components/Carousel'
 
 const TOYS = [
   {
@@ -49,7 +49,7 @@ const TOYS = [
 const RecommendedView = () => {
   return (
     <section>
-      <CarouselV2 title='Recommended for you' slidesPerView={2.6}>
+      <Carousel title='Recommended for you' slidesPerView={2.6} spaceBetween={20}>
         {TOYS.map((toy, index) => (
           <SwiperSlide key={index} className='flex justify-center'>
             <div key={index} className='flex flex-col items-center space-y-4 cursor-pointer group'>
@@ -63,7 +63,7 @@ const RecommendedView = () => {
             </div>
           </SwiperSlide>
         ))}
-      </CarouselV2>
+      </Carousel>
     </section>
   )
 }

@@ -11,7 +11,7 @@ body {
 }
 
 .footer-heading {
-  @apply lg:text-2xl tracking-tighter font-black uppercase;
+  @apply font-black tracking-tighter uppercase lg:text-2xl;
 }
 
 .footer-content {
@@ -20,10 +20,10 @@ body {
 
 @layer utilities {
   .clip-banner {
-    clip-path: polygon(0 0, 100% 13%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 4%, 100% 0, 100% 100%, 0% 100%);
   }
 
   .clip-banner-inverse {
-    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 4%, 100% 100%, 0% 100%);
   }
 }

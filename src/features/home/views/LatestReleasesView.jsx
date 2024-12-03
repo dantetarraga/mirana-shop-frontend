@@ -1,9 +1,9 @@
 import { SwiperSlide } from 'swiper/react'
-import CarouselV2 from '../components/CarouselV2'
+import Carousel from '../components/Carousel'
 
-const Card = ({ image, title, description, link }) => {
+const Card = ({ className, image, title, description, link }) => {
   return (
-    <div className='relative cursor-pointer group bg-white overflow-hidden lg:w-[460px] lg:h-[460px] border-[9px] border-black'>
+    <div className={`relative cursor-pointer group bg-white overflow-hidden lg:w-[460px] lg:h-[460px] border-[9px] border-black ${className}`}>
       <img
         src={image}
         alt={title}
@@ -74,9 +74,15 @@ const cards = [
 
 const LatestReleasesView = () => {
   return (
-    <section>
-      {/* <Carousel title='Últimos lanzamientos' hasClippedBackground slideDistance={574} visibleItems={4}>
-        {cards.map((card, index) => (
+    <Carousel
+      title='Últimos lanzamientos'
+      visibleItems={1}
+      hasClippedBackgroundInverted
+      spaceBetween={12}
+      slidesPerView={1.3}
+    >
+      {cards.map((card, index) => (
+        <SwiperSlide key={index} className='flex justify-center'>
           <Card
             key={index}
             image={card.image}
@@ -84,29 +90,9 @@ const LatestReleasesView = () => {
             description={card.description}
             link={card.link}
           />
-        ))}
-      </Carousel> */}
-
-      <CarouselV2
-        title='Últimos lanzamientos'
-        visibleItems={1}
-        hasClippedBackground
-        spaceBetween={24}
-        slidesPerView={1.6}
-      >
-        {cards.map((card, index) => (
-          <SwiperSlide key={index} className='flex justify-center'>
-            <Card
-              key={index}
-              image={card.image}
-              title={card.title}
-              description={card.description}
-              link={card.link}
-            />
-          </SwiperSlide>
-        ))}
-      </CarouselV2>
-    </section>
+        </SwiperSlide>
+      ))}
+    </Carousel>
   )
 }
 
