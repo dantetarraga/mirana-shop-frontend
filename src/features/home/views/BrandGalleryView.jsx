@@ -18,7 +18,7 @@ const BRANDS = [
 
 const BrandGalleryView = () => {
   return (
-    <section className='relative z-10 flex flex-col items-center py-12 space-y-4 text-black lg:py-8 lg:mt-8 font-montserrat -top-7'>
+    <section className='relative z-10 flex flex-col items-center py-12 space-y-4 text-black lg:py-8 lg:mt-8 font-montserrat -top-3'>
       {/* <div className='-z-10 absolute bg-gray-900 w-[350px] h-[350px] -left-[65px] -rotate-[10deg]' /> */}
 
       {/* <div className='flex flex-col justify-center gap-[24px]'>
@@ -32,21 +32,21 @@ const BrandGalleryView = () => {
         </p>
       </div> */}
 
-      <div className='absolute inset-0 clip-banner-inverse bg-[#E7E7E0] -z-10' />
+      <div className='absolute inset-0 clip-banner bg-[#E7E7E0] -z-10' />
 
-      <h2 className='text-xl font-black text-center text-black '>
+      <h2 className='text-xl font-black text-center text-black md:text-4xl'>
         ALL YOUR FAVORITE BRANDS
       </h2>
 
       {/* Swiper Carrusel */}
       <Swiper
         modules={[Pagination, Navigation]}
-        spaceBetween={20}
+        spaceBetween={4}
         slidesPerView={4.6}
         className='w-full max-w-[900px]'
         breakpoints={{
           320: { slidesPerView: 4.6 }, // Móviles
-          480: { slidesPerView: 4.6 } // Tablets pequeñas
+          480: { slidesPerView: 5.6 } // Tablets pequeñas
         }}
       >
         {BRANDS.map((brand, index) => (
@@ -55,14 +55,14 @@ const BrandGalleryView = () => {
               key={index}
               src={brand}
               alt={`Brand ${index + 1}`}
-              className='w-24 transition-all duration-300 transform rounded-full cursor-pointer hover:scale-110'
+              className='w-24 transition-all duration-300 transform rounded-full cursor-pointer md:w-32 hover:scale-110'
             />
           </SwiperSlide>
         ))}
       </Swiper>
 
       <p className='font-black cursor-pointer group'>
-        <span className='relative text-sm'>
+        <span className='relative text-sm md:text-lg'>
           SEE ALL BRANDS
           <span className='absolute bottom-[-6px] left-0 h-[3.2px] bg-red-500 transition-all duration-300 w-full' />
         </span>

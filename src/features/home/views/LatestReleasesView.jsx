@@ -12,12 +12,12 @@ const Card = ({ className, image, title, description, link }) => {
 
       <div className='absolute bottom-0 w-full p-2 text-center bg-black lg:h-40 bg-opacity-80'>
         <h3 className='text-sm font-bold text-white lg:text-lg'>{title}</h3>
-        <p className='hidden mt-1 text-sm text-gray-200 lg:block'>
+        <p className='hidden mt-1 text-sm text-gray-200 md:block lg:block'>
           {description}
         </p>
         <a
           href={link}
-          className='hidden mt-2 font-bold text-red-500 lg:inline-block'
+          className='hidden mt-2 font-bold text-red-500 md:block lg:inline-block'
         >
           Pre-Order Now
         </a>
@@ -73,6 +73,12 @@ const cards = [
 ]
 
 const LatestReleasesView = () => {
+  const breakpoints = {
+    768: { slidesPerView: 1.68 },
+    1024: { slidesPerView: 3.3 },
+    1280: { slidesPerView: 4.3 },
+    1536: { slidesPerView: 5.3 }
+  }
   return (
     <Carousel
       title='Últimos lanzamientos'
@@ -80,6 +86,7 @@ const LatestReleasesView = () => {
       hasClippedBackgroundInverted
       spaceBetween={12}
       slidesPerView={1.3}
+      breakpoints={breakpoints}
     >
       {cards.map((card, index) => (
         <SwiperSlide key={index} className='flex justify-center'>

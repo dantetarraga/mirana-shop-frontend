@@ -1,8 +1,8 @@
 const CollectItAllView = () => {
   return (
-    <section className='px-2 space-y-5 lg:py-10 lg:mt-10'>
+    <section className='px-4 space-y-5 lg:py-10 lg:mt-10'>
       <div className='flex justify-center'>
-        <h2 className='text-xl font-black tracking-tighter text-center uppercase rounded-md lg:text-4xl font-montserrat'>
+        <h2 className='text-xl font-black tracking-tighter text-center uppercase rounded-md md:text-2xl lg:text-4xl font-montserrat'>
           Coleccionalo todo
         </h2>
       </div>

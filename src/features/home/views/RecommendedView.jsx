@@ -47,13 +47,32 @@ const TOYS = [
 ]
 
 const RecommendedView = () => {
+  const breakpoints = {
+    768: { slidesPerView: 3.65 },
+    1024: { slidesPerView: 4.1 },
+    1280: { slidesPerView: 4.3 },
+    1536: { slidesPerView: 5.3 }
+  }
+
   return (
     <section>
-      <Carousel title='Recommended for you' slidesPerView={2.6} spaceBetween={20}>
+      <Carousel
+        title='Recommended for you'
+        slidesPerView={2.6}
+        spaceBetween={20}
+        breakpoints={breakpoints}
+      >
         {TOYS.map((toy, index) => (
           <SwiperSlide key={index} className='flex justify-center'>
-            <div key={index} className='flex flex-col items-center space-y-4 cursor-pointer group'>
-              <img src={toy.image} alt={toy.name} className='w-[70%] object-cover group-hover:drop-shadow-[0_0_10px_rgba(0,0,0,.7)]' />
+            <div
+              key={index}
+              className='flex flex-col items-center space-y-4 cursor-pointer group'
+            >
+              <img
+                src={toy.image}
+                alt={toy.name}
+                className='w-[55%] object-cover group-hover:drop-shadow-[0_0_10px_rgba(0,0,0,.7)]'
+              />
 
               <div className='w-full h-auto p-2 text-center bg-gray-100 lg:p-4'>
                 <h3 className='text-sm font-bold lg:text-lg'>{toy.name}</h3>

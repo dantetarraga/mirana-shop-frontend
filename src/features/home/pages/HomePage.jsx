@@ -5,6 +5,7 @@ import {
   LatestReleasesView,
   RecommendedView
 } from '../views'
+import ShopAdvantages from '../views/ShopAdvantages'
 
 const HomePage = () => {
   return (
@@ -16,9 +17,10 @@ const HomePage = () => {
         <CollectItAllView />
       </section>
 
-      <section>
+      <section className=''>
         <LatestReleasesView />
         <RecommendedView />
+        <ShopAdvantages />
       </section>
     </>
   )

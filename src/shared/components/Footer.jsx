@@ -1,9 +1,10 @@
+import { useState } from 'react'
+import { ChevronDown } from 'lucide-react'
+
 import Facebook from '@/assets/social-media/facebook.svg'
 import Instagram from '@/assets/social-media/instagram.svg'
 import Youtube from '@/assets/social-media/youtube.svg'
 import Tiktok from '@/assets/social-media/tiktok.svg'
-import { useState } from 'react'
-import { ChevronDown } from 'lucide-react'
 
 const SOCIAL_MEDIA = [
   {
@@ -26,14 +27,20 @@ const SOCIAL_MEDIA = [
 
 const Footer = () => {
   const [openMenu, setOpenMenu] = useState(null)
-  const handleToggleMenu = (menuTitle) => setOpenMenu(openMenu === menuTitle ? null : menuTitle)
+  const handleToggleMenu = (menuTitle) =>
+    setOpenMenu(openMenu === menuTitle ? null : menuTitle)
 
   return (
-    <footer className='text-white flex items-center justify-center bg-[#101820] clip-banner min-h-[500px] '>
+    <footer className='text-white flex items-center justify-center bg-[#101820] clip-banner min-h-[420px] '>
       <div className='grid grid-cols-1 lg:grid-cols-5 lg:gap-[50px] w-[85%] lg:w-[1250px] [&>div]:py-4 [&>div]:px-1'>
-        <div className='space-y-2 [&>ul]:space-y-2 border-y border-white' onClick={() => handleToggleMenu('register')}>
+        <div
+          className='space-y-2 [&>ul]:space-y-2 border-y border-white'
+          onClick={() => handleToggleMenu('register')}
+        >
           <div className='flex justify-between'>
-            <h4 className='footer-heading'>Registrate ahora y empieza a ahorrar</h4>
+            <h4 className='footer-heading'>
+              Registrate ahora y empieza a ahorrar
+            </h4>
             <ChevronDown />
           </div>
 
@@ -56,7 +63,12 @@ const Footer = () => {
 
         <div className='space-y-2 [&>ul]:space-y-2 border-y border-white'>
           <div className='flex justify-between'>
-            <h4 className='footer-heading' onClick={() => handleToggleMenu('about')}>Sobre Nosotros</h4>
+            <h4
+              className='footer-heading'
+              onClick={() => handleToggleMenu('about')}
+            >
+              Sobre Nosotros
+            </h4>
             <ChevronDown />
           </div>
 
@@ -87,7 +99,11 @@ const Footer = () => {
           <ul className='flex items-center justify-center gap-6'>
             {SOCIAL_MEDIA.map(({ image, alt }) => (
               <li key={alt}>
-                <img src={image} alt={alt} className='w-[30px] lg:w-[40px] rounded-md cursor-pointer' />
+                <img
+                  src={image}
+                  alt={alt}
+                  className='w-[30px] lg:w-[40px] rounded-md cursor-pointer'
+                />
               </li>
             ))}
           </ul>

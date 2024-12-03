@@ -14,6 +14,10 @@ body {
   @apply font-black tracking-tighter uppercase lg:text-2xl;
 }
 
+.subsection-heading {
+  @apply text-4xl font-black tracking-tighter text-center uppercase font-montserrat;
+}
+
 .footer-content {
   @apply text-sm;
 }
