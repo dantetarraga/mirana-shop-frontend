@@ -5,6 +5,7 @@ import Facebook from '@/assets/social-media/facebook.svg'
 import Instagram from '@/assets/social-media/instagram.svg'
 import Youtube from '@/assets/social-media/youtube.svg'
 import Tiktok from '@/assets/social-media/tiktok.svg'
+import useUIState from '../../app/hooks/useUIState'
 
 const SOCIAL_MEDIA = [
   {
@@ -29,22 +30,23 @@ const Footer = () => {
   const [openMenu, setOpenMenu] = useState(null)
   const handleToggleMenu = (menuTitle) =>
     setOpenMenu(openMenu === menuTitle ? null : menuTitle)
+  const { screenSize } = useUIState()
 
   return (
     <footer className='text-white flex items-center justify-center bg-[#101820] clip-banner min-h-[420px] '>
       <div className='grid grid-cols-1 lg:grid-cols-5 lg:gap-[50px] w-[85%] lg:w-[1250px] [&>div]:py-4 [&>div]:px-1'>
         <div
-          className='space-y-2 [&>ul]:space-y-2 border-y border-white'
+          className={`space-y-2 [&>ul]:space-y-2 ${screenSize !== 'desktop' && 'border-y border-white'}`}
           onClick={() => handleToggleMenu('register')}
         >
           <div className='flex justify-between'>
             <h4 className='footer-heading'>
               Registrate ahora y empieza a ahorrar
             </h4>
-            <ChevronDown />
+            {screenSize !== 'desktop' && <ChevronDown />}
           </div>
 
-          <div hidden className='w-full'>
+          <div hidden={screenSize !== 'desktop'} className='w-full'>
             <p className=''>
               Registrate para ser el primero en enterarte de nuestras novedades,
               promociones especiales y esclusivas online.
@@ -61,7 +63,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='space-y-2 [&>ul]:space-y-2 border-y border-white'>
+        <div className={`space-y-2 [&>ul]:space-y-2 ${screenSize !== 'desktop' && 'border-y border-white'}`}>
           <div className='flex justify-between'>
             <h4
               className='footer-heading'
@@ -69,10 +71,10 @@ const Footer = () => {
             >
               Sobre Nosotros
             </h4>
-            <ChevronDown />
+            {screenSize !== 'desktop' && <ChevronDown />}
           </div>
 
-          <ul hidden>
+          <ul hidden={screenSize !== 'desktop'}>
             <li>Nuestra historia</li>
             <li>Programa de afiliados</li>
             <li>Chat en linea</li>
@@ -80,12 +82,12 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className='space-y-2 [&>ul]:space-y-2 border-y border-white'>
+        <div className={`space-y-2 [&>ul]:space-y-2 ${screenSize !== 'desktop' && 'border-y border-white'}`}>
           <div className='flex justify-between'>
             <h4 className='footer-heading'>Atención al cliente</h4>
-            <ChevronDown />
+            {screenSize !== 'desktop' && <ChevronDown />}
           </div>
-          <ul hidden>
+          <ul hidden={screenSize !== 'desktop'}>
             <li>Devoluciones y cambios</li>
             <li>Información de envio</li>
             <li>Seguimiento de pedido</li>

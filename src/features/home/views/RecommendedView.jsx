@@ -4,13 +4,13 @@ import Carousel from '../components/Carousel'
 const TOYS = [
   {
     image: '/30.png',
-    name: 'Gill Beast: Namazu Vinyl Collectible',
+    name: 'Gill Beast: Namazu Vinyl',
     type: 'Siver Collectible',
     price: 120
   },
   {
     image: '/30.png',
-    name: 'Harley Quinn™ & The Joker™: Lawless Love Art Print',
+    name: 'Harley Quinn™',
     type: 'Art Print',
     price: 50
   },
@@ -49,9 +49,7 @@ const TOYS = [
 const RecommendedView = () => {
   const breakpoints = {
     768: { slidesPerView: 3.65 },
-    1024: { slidesPerView: 4.1 },
-    1280: { slidesPerView: 4.3 },
-    1536: { slidesPerView: 5.3 }
+    1024: { slidesPerView: 6.2 }
   }
 
   return (
@@ -71,7 +69,7 @@ const RecommendedView = () => {
               <img
                 src={toy.image}
                 alt={toy.name}
-                className='w-[55%] object-cover group-hover:drop-shadow-[0_0_10px_rgba(0,0,0,.7)]'
+                className='w-[55%] lg:w-[40%] object-cover group-hover:drop-shadow-[0_0_10px_rgba(0,0,0,.7)]'
               />
 
               <div className='w-full h-auto p-2 text-center bg-gray-100 lg:p-4'>

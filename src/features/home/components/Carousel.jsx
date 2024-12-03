@@ -20,7 +20,7 @@ const Carousel = ({
   const swiperRef = useRef(null)
 
   return (
-    <div className='relative lg:h-[600px] pt-8 pb-4 lg:p-[24px] overflow-hidden'>
+    <div className='relative lg:h-[600px] pt-8 lg:pt-0 pb-4  overflow-hidden'>
       {hasClippedBackground && (
         <div className='w-full h-[435px] clip-banner -z-10 left-0 top-0 absolute bg-[#E7E7E0]' />
       )}

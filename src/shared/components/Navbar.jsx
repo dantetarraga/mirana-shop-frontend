@@ -69,7 +69,7 @@ const Navbar = () => {
           </li>
           <li className='relative hover:bg-slate-500'>
             <ShoppingCart size={20} />
-            <span className='absolute grid w-3 h-3 text-center text-white bg-red-600 rounded-full text-[8.5px] -right-[4px] top-[1px] place-content-center font-semibold'>
+            <span className='absolute grid w-3 h-3 lg:w-[14px] lg:h-[14px] text-center text-white bg-red-600 rounded-full text-[8.5px] -right-[4px] top-[1px] lg:top-[4px] lg:right-[1px] place-content-center font-semibold'>
               1
             </span>
           </li>

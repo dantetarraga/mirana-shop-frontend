@@ -3,14 +3,14 @@ import Carousel from '../components/Carousel'
 
 const Card = ({ className, image, title, description, link }) => {
   return (
-    <div className={`relative cursor-pointer group bg-white overflow-hidden lg:w-[460px] lg:h-[460px] border-[9px] border-black ${className}`}>
+    <div className={`relative cursor-pointer group bg-white overflow-hidden border-[9px] border-black ${className}`}>
       <img
         src={image}
         alt={title}
         className='object-cover w-full transition-transform duration-500 ease-in-out transform group-hover:scale-105'
       />
 
-      <div className='absolute bottom-0 w-full p-2 text-center bg-black lg:h-40 bg-opacity-80'>
+      <div className='absolute bottom-0 w-full p-2 text-center bg-black lg:h-32 bg-opacity-80'>
         <h3 className='text-sm font-bold text-white lg:text-lg'>{title}</h3>
         <p className='hidden mt-1 text-sm text-gray-200 md:block lg:block'>
           {description}
@@ -74,10 +74,7 @@ const cards = [
 
 const LatestReleasesView = () => {
   const breakpoints = {
-    768: { slidesPerView: 1.68 },
-    1024: { slidesPerView: 3.3 },
-    1280: { slidesPerView: 4.3 },
-    1536: { slidesPerView: 5.3 }
+    1024: { slidesPerView: 3.7 }
   }
   return (
     <Carousel

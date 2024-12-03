@@ -26,7 +26,7 @@ const CollectItAllView = () => {
               </p>
             </div>
 
-            <p className='absolute z-20 px-4 py-2 lg:py-3 text-xs lg:text-sm lg:font-bold text-white transform -translate-x-1/2 bg-[#101820] rounded-sm -bottom-3 left-1/2 group-hover:bg-[#F23F40]'>
+            <p className='absolute z-20 px-4 py-2 lg:py-3 text-xs lg:text-sm lg:font-bold text-white transform -translate-x-1/2 bg-[#101820] rounded-sm -bottom-3 lg:-bottom-4 left-1/2 group-hover:bg-[#F23F40]'>
               Comprar
             </p>
           </div>
