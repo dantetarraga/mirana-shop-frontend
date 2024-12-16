@@ -74,6 +74,7 @@ const cards = [
 
 const LatestReleasesView = () => {
   const breakpoints = {
+    768: { slidesPerView: 2.4 },
     1024: { slidesPerView: 3.7 }
   }
   return (
