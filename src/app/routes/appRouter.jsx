@@ -1,7 +1,10 @@
 import { createBrowserRouter } from 'react-router'
+
 import HomePage from '@/features/home/pages/HomePage'
-import { productRouter } from '@/features/products/router/productRouter'
 import MainLayout from '../layouts/MainLayout'
+
+import { productRouter } from '@/features/products/router/productRouter'
+import { paymentRouter } from '@/features/payment/router/paymentRouter'
 
 const router = [
   {
@@ -12,7 +15,8 @@ const router = [
         index: true,
         element: <HomePage />
       },
-      ...productRouter
+      ...productRouter,
+      ...paymentRouter
     ]
   }
 ]

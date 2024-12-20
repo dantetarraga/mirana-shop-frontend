@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router'
 
-const ProductLayout = () => {
+const ContentLayout = () => {
   return (
     <main className='pt-[80px] px-[16px]'>
       <Outlet />
@@ -8,4 +8,4 @@ const ProductLayout = () => {
   )
 }
 
-export default ProductLayout
+export default ContentLayout

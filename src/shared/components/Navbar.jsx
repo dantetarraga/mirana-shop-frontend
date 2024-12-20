@@ -62,17 +62,18 @@ const Navbar = () => {
       <div className='flex justify-end flex-grow basis-0'>
         <ul className='flex gap-[8px] [&>*]:cursor-pointer [&>*]:rounded md:[&>*]:p-[8px] [&>*]:p-[4px]'>
           <li className='hover:bg-slate-500'>
-            <Search size={20} />
+            <Search size={22} />
           </li>
           <li className='hover:bg-slate-500'>
-            <User size={20} />
+            <User size={22} />
           </li>
           <li className='relative hover:bg-slate-500'>
-            <ShoppingCart size={20} />
-            <span className='absolute grid w-3 h-3 lg:w-[14px] lg:h-[14px] text-center text-white bg-red-600 rounded-full text-[8.5px] -right-[4px] top-[1px] lg:top-[4px] lg:right-[1px] place-content-center font-semibold'>
-              1
+            <ShoppingCart size={22} />
+            <span className='absolute md:top-0 md:right-0 flex items-center justify-center bg-red-600 text-xs font-semibold rounded-full w-[16px] h-[16px] -right-1 -top-[2px]'>
+              5
             </span>
           </li>
+
         </ul>
       </div>
     </header>

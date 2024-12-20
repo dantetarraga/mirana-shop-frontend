@@ -1,15 +1,15 @@
-import ProductLayout from '../layout/ProductLayout'
+import ContentLayout from '@/app/layouts/ContentLayout'
 import ProductDetailPage from '../pages/ProductDetailPage'
-import ProductPage from '../pages/ProductPage'
+import ProductsPage from '../pages/ProductsPage'
 
 export const productRouter = [
   {
     path: '/products',
-    element: <ProductLayout />,
+    element: <ContentLayout />,
     children: [
       {
         index: true,
-        element: <ProductPage />
+        element: <ProductsPage />
       },
       {
         path: ':productId',

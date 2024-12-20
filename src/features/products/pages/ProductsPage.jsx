@@ -1,7 +1,7 @@
 import { AlignLeft, Heart, ShoppingCart } from 'lucide-react'
 import { useNavigate } from 'react-router'
 
-const ProductPage = () => {
+const ProductsPage = () => {
   const navidate = useNavigate()
 
   const goToProductDetail = () => {
@@ -55,4 +55,4 @@ const ProductPage = () => {
   )
 }
 
-export default ProductPage
+export default ProductsPage
