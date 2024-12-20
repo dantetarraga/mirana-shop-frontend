@@ -32,8 +32,8 @@ const Carousel = ({
       <div
         className={`flex items-center justify-between px-4 ${
           hasClippedBackground || hasClippedBackgroundInverted
-            ? 'pt-10 mb-4 md:mb-8'
-            : 'pb-6'
+            ? 'pt-10 mb-4 md:mb-8 lg:mb-12'
+            : 'pb-6 lg:pb-12'
         }`}
       >
         <div className='flex-grow hidden md:block basis-0' />
