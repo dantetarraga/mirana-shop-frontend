@@ -1,5 +1,5 @@
 import { SwiperSlide } from 'swiper/react'
-import Carousel from '../components/Carousel'
+import Carousel from '../../components/Carousel'
 
 const TOYS = [
   {
@@ -55,7 +55,7 @@ const RecommendedView = () => {
   return (
     <section>
       <Carousel
-        title='Recommended for you'
+        title='Recomendados para ti'
         slidesPerView={2.6}
         spaceBetween={20}
         breakpoints={breakpoints}
@@ -73,7 +73,7 @@ const RecommendedView = () => {
               />
 
               <div className='w-full h-auto p-2 text-center bg-gray-100 lg:p-4'>
-                <h3 className='text-sm font-bold lg:text-lg'>{toy.name}</h3>
+                <h5 className='text-sm font-bold lg:text-lg'>{toy.name}</h5>
                 <p className='mt-1 text-sm text-gray-500'>{toy.type}</p>
                 <p className='mt-1 text-sm text-gray-500'>${toy.price}</p>
               </div>

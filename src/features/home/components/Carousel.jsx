@@ -20,7 +20,7 @@ const Carousel = ({
   const swiperRef = useRef(null)
 
   return (
-    <div className='relative lg:h-[600px] pt-8 lg:pt-0 pb-4  overflow-hidden'>
+    <div className='relative overflow-hidden lg:h-fit lg:pt-0'>
       {hasClippedBackground && (
         <div className='w-full h-[435px] clip-banner -z-10 left-0 top-0 absolute bg-[#E7E7E0]' />
       )}
@@ -29,10 +29,14 @@ const Carousel = ({
         <div className='w-full h-[435px] clip-banner-inverse -z-10 left-0 top-0 absolute bg-[#E7E7E0]' />
       )}
 
-      <div className='flex items-center justify-between px-4 mb-4 lg:mt-20'>
+      <div
+        className={`flex items-center justify-between px-4 ${
+          (hasClippedBackground || hasClippedBackgroundInverted) && 'lg:pt-10'
+        }`}
+      >
         <div className='flex-grow hidden md:block basis-0' />
 
-        <h2 className='font-black tracking-tighter text-black uppercase md:text-2xl md:text-center sm:grow sm:basis-0 lg:text-4xl'>
+        <h2 className='mb-8 font-black tracking-tighter text-black uppercase md:text-2xl md:text-center sm:grow sm:basis-0 lg:text-4xl'>
           {title}
         </h2>
 
@@ -66,7 +70,6 @@ const Carousel = ({
       >
         {children}
       </Swiper>
-
     </div>
   )
 }

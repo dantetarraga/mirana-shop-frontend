@@ -5,7 +5,7 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
 import { Pagination, Navigation } from 'swiper/modules'
-import useUIState from '../../../app/hooks/useUIState'
+import useUIState from '@/app/hooks/useUIState'
 
 const BRANDS = [
   '/brands/1.svg',
@@ -50,7 +50,7 @@ const BrandGalleryView = () => {
           </div>
         </section>
       ) : (
-        <section className='relative z-10 flex flex-col items-center py-8 space-y-4 text-black lg:py-8 lg:mt-8 font-montserrat -top-3'>
+        <section className='relative z-10 flex flex-col items-center py-8 space-y-4 text-black font-montserrat -top-3'>
           <div className='absolute inset-0 clip-banner bg-[#E7E7E0] -z-10' />
 
           <h2 className='text-xl font-black text-center text-black md:text-4xl'>

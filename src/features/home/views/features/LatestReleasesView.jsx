@@ -1,5 +1,5 @@
 import { SwiperSlide } from 'swiper/react'
-import Carousel from '../components/Carousel'
+import Carousel from '../../components/Carousel'
 
 const Card = ({ className, image, title, description, link }) => {
   return (
@@ -75,7 +75,7 @@ const cards = [
 const LatestReleasesView = () => {
   const breakpoints = {
     768: { slidesPerView: 2.4 },
-    1024: { slidesPerView: 3.7 }
+    1024: { slidesPerView: 4.15 }
   }
   return (
     <Carousel
