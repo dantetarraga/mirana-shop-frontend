@@ -33,7 +33,7 @@ const Footer = () => {
   const { screenSize } = useUIState()
 
   return (
-    <footer className='text-white flex items-center justify-center bg-[#101820] clip-banner min-h-[420px] '>
+    <footer className='text-white mt-8 flex items-center justify-center bg-[#101820] clip-banner min-h-[420px] '>
       <div className='grid grid-cols-1 lg:grid-cols-5 lg:gap-[50px] w-[85%] lg:w-[1250px] [&>div]:py-4 [&>div]:px-1'>
         <div
           className={`space-y-2 [&>ul]:space-y-2 ${screenSize !== 'desktop' && 'border-y border-white'}`}
