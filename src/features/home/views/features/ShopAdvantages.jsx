@@ -2,8 +2,8 @@ import { BookCheck, HandCoins, PackageSearch, Ticket } from 'lucide-react'
 
 const ShopAdvantages = () => {
   return (
-    <div className='flex flex-col justify-center space-y-14'>
-      <div className='w-3/4 mx-auto text-center space-y-7 lg:w-1/3'>
+    <div className='flex flex-col justify-center space-y-8 md:space-y-14'>
+      <div className='w-3/4 mx-auto space-y-3 text-center md:space-y-7 lg:w-1/3'>
         <h3 className='subsection-heading'>¿Por que comprar en Mirana Shop?</h3>
         <p className='text-sm text-center text-gray-500 md:text-base'>
           Comprar con Sideshow viene con beneficios únicos que no están disponibles en ningún otro lugar. Descubre todas las razones para quedarte y jugar.
