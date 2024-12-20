@@ -31,12 +31,14 @@ const Carousel = ({
 
       <div
         className={`flex items-center justify-between px-4 ${
-          (hasClippedBackground || hasClippedBackgroundInverted) && 'lg:pt-10'
+          hasClippedBackground || hasClippedBackgroundInverted
+            ? 'pt-10 mb-4 md:mb-8'
+            : 'pb-6'
         }`}
       >
         <div className='flex-grow hidden md:block basis-0' />
 
-        <h2 className='mb-8 font-black tracking-tighter text-black uppercase md:text-2xl md:text-center sm:grow sm:basis-0 lg:text-4xl'>
+        <h2 className='font-black tracking-tighter text-black uppercase md:text-2xl md:text-center sm:grow sm:basis-0 lg:text-4xl'>
           {title}
         </h2>
 
