@@ -16,15 +16,17 @@ const Navbar = () => {
 
   console.log('Navbar render')
 
+  const goToPayment = () => navigate('/payment')
+
   return (
     <header
       className={`fixed top-0 z-30 flex items-center w-full pr-[16px] lg:px-[48px] h-[65px] text-white ${backgroundClass}`}
     >
       <button
-        className='bg-[#02A8FE] h-full flex items-center justify-center w-[60px] lg:hidden'
+        className='bg-[#02A8FE] h-full flex items-center justify-center w-[55px] lg:hidden'
         onClick={toggleSidebar}
       >
-        <Menu size={32} />
+        <Menu size={30} />
       </button>
 
       <div className='flex flex-grow basis-0'>
@@ -67,13 +69,12 @@ const Navbar = () => {
           <li className='hover:bg-slate-500'>
             <User size={22} />
           </li>
-          <li className='relative hover:bg-slate-500'>
+          <li className='relative hover:bg-slate-500' onClick={goToPayment}>
             <ShoppingCart size={22} />
             <span className='absolute md:top-0 md:right-0 flex items-center justify-center bg-red-600 text-xs font-semibold rounded-full w-[16px] h-[16px] -right-1 -top-[2px]'>
               5
             </span>
           </li>
-
         </ul>
       </div>
     </header>
