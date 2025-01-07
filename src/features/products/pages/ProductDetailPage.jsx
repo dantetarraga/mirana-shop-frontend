@@ -13,7 +13,7 @@ const ProductDetailPage = () => {
 
   return (
     <section className='max-w-[1150px] mx-auto space-y-4'>
-      <div className='pb-4 border-b-4 border-red-700'>
+      {/* <div className='pb-4 border-b-4 border-red-700'>
         <h2 className='text-xl font-bold uppercase md:text-2xl font-montserrat'>
           Spider-Man: No Way Home Marvel Legends Green Goblin 1:1 Scale Wearable
           Helmet
@@ -21,17 +21,17 @@ const ProductDetailPage = () => {
         <p className='text-sm font-bold uppercase'>
           Brand <span className='text-red-700'>Marvel</span>
         </p>
-      </div>
+      </div> */}
 
-      <div className='grid grid-cols-1 gap-5 md:grid-cols-3'>
-        <section className='md:col-span-2'>
+      <div className='grid grid-cols-1 gap-12 md:grid-cols-2'>
+        <section>
           <ProductGallery images={IMAGES_BY_PRODUCT} />
         </section>
 
         {/* Detalles del producto */}
         <section>
           <ProductDetails
-            price='$124.99'
+            price='124.99'
             installments='4'
             paymentMethod='$31.25'
           />
