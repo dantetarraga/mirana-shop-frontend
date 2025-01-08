@@ -87,7 +87,7 @@ const ProductDetails = ({ price }) => {
           <h1 className='text-3xl font-extrabold tracking-tight text-[#334155] leading-tight'>
             Groot Guardians of the Galaxy Vol. 3 – HOT TOYS
           </h1>
-          <div className='inline-flex items-center px-4 py-2 bg-[#10B981] text-white rounded-full text-sm font-medium animate-scale-in'>
+          <div className='inline-flex items-center px-3 py-1 text-sm font-bold text-green-600 uppercase rounded-full bg-green-50 animate-scale-in'>
             En stock
           </div>
         </div>
