@@ -1,6 +1,9 @@
-import { Menu, Search, ShoppingCart, User } from 'lucide-react'
+/* eslint-disable multiline-ternary */
+import { Menu, Moon, Search, ShoppingCart, Sun, User } from 'lucide-react'
 import { NavLink, useNavigate } from 'react-router'
 import useUIState from '@/app/hooks/useUIState'
+import useUIStore from '../../app/store/useUIStore'
+import { useEffect } from 'react'
 
 const ITEMS_NAVBAR = [
   { href: '/products', label: 'Productos' },
@@ -12,9 +15,20 @@ const ITEMS_NAVBAR = [
 
 const Navbar = () => {
   const { toggleSidebar, backgroundClass } = useUIState()
+  const { theme, toggleTheme } = useUIStore()
   const navigate = useNavigate()
 
   console.log('Navbar render')
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('theme', 'dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('theme', 'light')
+    }
+  }, [theme])
 
   const goToPayment = () => navigate('/payment')
 
@@ -65,6 +79,13 @@ const Navbar = () => {
         <ul className='flex gap-[8px] [&>*]:cursor-pointer [&>*]:rounded md:[&>*]:p-[8px] [&>*]:p-[4px]'>
           <li className='hover:bg-slate-500'>
             <Search size={22} />
+          </li>
+          <li className='hover:bg-slate-500'>
+            {theme === 'light' ? (
+              <Sun onClick={toggleTheme} />
+            ) : (
+              <Moon onClick={toggleTheme} />
+            )}
           </li>
           <li className='hover:bg-slate-500'>
             <User size={22} />

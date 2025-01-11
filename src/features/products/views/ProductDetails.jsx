@@ -81,7 +81,7 @@ const ProductDetails = ({ price }) => {
   }
 
   return (
-    <div className='flex flex-col gap-8 p-8 bg-white shadow-sm rounded-xl animate-fade-in'>
+    <div className='flex flex-col gap-8 p-8 shadow-sm bg-card rounded-xl animate-fade-in'>
       <div className='space-y-4'>
         <div className='flex items-center gap-3'>
           <h1 className='text-3xl font-extrabold tracking-tight text-[#334155] leading-tight'>
