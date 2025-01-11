@@ -8,6 +8,20 @@ import ProductGallery from '../views/ProductGallery'
 
 const IMAGES_BY_PRODUCT = Array(5).fill('/alien.avif')
 
+const productDescription = {
+  title: 'Descripción del producto',
+  content: `Sumérgete en el universo Marvel con este increíble casco de Green Goblin a escala 1:1, 
+    una réplica exacta del usado en Spider-Man: No Way Home. Fabricado con materiales de alta calidad, 
+    este casco coleccionable cuenta con detalles precisos, acabados metálicos y efectos de desgaste 
+    que lo hacen parecer recién salido de la película.`,
+  features: [
+    'Material: Plástico de alta calidad con acabados metálicos',
+    'Tamaño: Escala 1:1 (tamaño real)',
+    'Detalles precisos de la película',
+    'Perfecto para coleccionistas'
+  ]
+}
+
 const ProductDetailPage = () => {
   // const { productId } = useParams()
 
@@ -23,7 +37,7 @@ const ProductDetailPage = () => {
         </p>
       </div> */}
 
-      <div className='grid grid-cols-1 gap-12 md:grid-cols-2'>
+      <div className='grid grid-cols-1 gap-12 lg:grid-cols-2'>
         <section>
           <ProductGallery images={IMAGES_BY_PRODUCT} />
         </section>
@@ -37,6 +51,21 @@ const ProductDetailPage = () => {
           />
         </section>
       </div>
+
+      {/* Descripcion del producto */}
+      <section className='w-full p-6 mt-8 bg-white shadow-sm rounded-xl sm:p-8 lg:p-10'>
+        <h2 className='text-2xl font-bold text-[#334155] mb-6'>{productDescription.title}</h2>
+        <div className='prose max-w-none'>
+          <p className='text-[#64748B] text-base sm:text-lg mb-8'>
+            {productDescription.content}
+          </p>
+          <ul className='list-disc list-inside space-y-2 text-[#64748B]'>
+            {productDescription.features.map((feature, index) => (
+              <li key={index} className='text-base sm:text-lg'>{feature}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
     </section>
   )
 }
