@@ -1,6 +1,6 @@
 import { Play, X } from 'lucide-react'
 import { useNavigate } from 'react-router'
-import useUIState from '@/app/hooks/useUIState'
+import useUIState from '../hooks/useUIState'
 
 const ITEMS_NAVBAR = [
   { href: '/products', label: 'Productos' },

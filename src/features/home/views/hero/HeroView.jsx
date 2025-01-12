@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import useUIState from '@/app/hooks/useUIState'
+import useUIState from '../../../../shared/hooks/useUIState'
 
 const slides = [
   {

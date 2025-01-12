@@ -5,7 +5,7 @@ import Facebook from '@/assets/social-media/facebook.svg'
 import Instagram from '@/assets/social-media/instagram.svg'
 import Youtube from '@/assets/social-media/youtube.svg'
 import Tiktok from '@/assets/social-media/tiktok.svg'
-import useUIState from '../../app/hooks/useUIState'
+import useUIState from '../hooks/useUIState'
 
 const SOCIAL_MEDIA = [
   {

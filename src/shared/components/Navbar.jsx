@@ -1,9 +1,9 @@
 /* eslint-disable multiline-ternary */
 import { Menu, Moon, Search, ShoppingCart, Sun, User } from 'lucide-react'
 import { NavLink, useNavigate } from 'react-router'
-import useUIState from '@/app/hooks/useUIState'
 import useUIStore from '../../app/store/useUIStore'
 import { useEffect } from 'react'
+import useUIState from '../hooks/useUIState'
 
 const ITEMS_NAVBAR = [
   { href: '/products', label: 'Productos' },
