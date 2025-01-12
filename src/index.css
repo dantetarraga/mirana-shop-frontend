@@ -8,12 +8,33 @@
 
 @layer base {
   :root {
-    --background: #F9FAFB;
+    --background: 210,20%,98%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
 
+    --card-pricing-bg: 210, 28%, 96%; 
+    --card-pricing-border: 210, 22%, 90%;
+    --card-pricing-price: 217, 28%, 15%; 
+    --card-pricing-highlight: 201, 89%, 53%; 
+    --card-pricing-secondary: 217, 20%, 50%; 
+    --card-pricing-btn-bg: 201, 85%, 45%; 
+    --card-pricing-btn-text: 0, 0%, 100%;
+    --card-pricing-btn-border: 201, 85%, 45%;
+    --card-pricing-counter-border: 210, 16%, 80%; 
+    --card-pricing-counter-text: 217, 28%, 15%; 
+
+    --text-primary: 217, 28%, 15%;
+    --text-secondary: 210, 22%, 50%; 
+    --text-muted: 210, 16%, 60%; 
+    --text-highlight: 201, 89%, 53%;
+    --text-link: 201, 89%, 43%; 
+    --text-success: 160, 60%, 45%; 
+    --text-warning: 40, 90%, 50%; 
+    --text-error: 0, 65%, 55%;
+    --text-description: 215, 25%, 15%;
+  
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
@@ -59,10 +80,30 @@
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
-    /* --card: 222.2 84% 4.9%; */
-    --card: #222222;
+    --card: 0,0%,13%;
     --card-foreground: 210 40% 98%;
 
+    --card-pricing-bg: 223, 26%, 14%; 
+    --card-pricing-border: 223, 18%, 20%; 
+    --card-pricing-price: 220,13%,91%; 
+    --card-pricing-highlight: 201, 89%, 70%;
+    --card-pricing-secondary: 210, 10%, 60%; 
+    --card-pricing-btn-bg: 201, 89%, 53%; 
+    --card-pricing-btn-text: 0, 0%, 100%; 
+    --card-pricing-btn-border: 201, 89%, 53%; 
+    --card-pricing-counter-border: 220, 15%, 40%; 
+    --card-pricing-counter-text: 210, 15%, 80%; 
+
+    --text-primary: 210, 15%, 80%;  
+    --text-secondary: 210, 10%, 60%;  
+    --text-muted: 210, 9%, 50%;  
+    --text-highlight: 201, 89%, 70%; 
+    --text-link: 201, 89%, 60%; 
+    --text-success: 160, 60%, 50%; 
+    --text-warning: 40, 85%, 55%; 
+    --text-error: 0, 65%, 65%; 
+    --text-description: 215,16%,47%; 
+    
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
@@ -104,8 +145,6 @@
     @apply bg-background text-foreground;
   }
 }
-
-/* bg-[#F9FAFB] */
 
 body {
   @apply font-montserrat box-border 

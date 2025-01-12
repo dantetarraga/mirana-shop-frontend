@@ -41,9 +41,36 @@ export default {
           DEFAULT: 'hsl(var(--popover))',
           foreground: 'hsl(var(--popover-foreground))'
         },
+        text: {
+          primary: 'hsl(var(--text-primary))',
+          secondary: 'hsl(var(--text-secondary))',
+          muted: 'hsl(var(--text-muted))',
+          highlight: 'hsl(var(--text-highlight))',
+          link: 'hsl(var(--text-link))',
+          success: 'hsl(var(--text-success))',
+          warning: 'hsl(var(--text-warning))',
+          error: 'hsl(var(--text-error))',
+          description: 'hsl(var(--text-description))'
+        },
         card: {
-          DEFAULT: 'var(--card)',
-          foreground: 'hsl(var(--card-foreground))'
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
+          pricing: {
+            DEFAULT: 'hsl(var(--card-pricing-bg))',
+            border: 'hsl(var(--card-pricing-border))',
+            price: 'hsl(var(--card-pricing-price))',
+            highlight: 'hsl(var(--card-pricing-highlight))',
+            secondary: 'hsl(var(--card-pricing-secondary))',
+            btn: {
+              bg: 'hsl(var(--card-pricing-btn-bg))',
+              text: 'hsl(var(--card-pricing-btn-text))',
+              border: 'hsl(var(--card-pricing-btn-border))'
+            },
+            counter: {
+              border: 'hsl(var(--card-pricing-counter-border))',
+              text: 'hsl(var(--card-pricing-counter-text))'
+            }
+          }
         },
         sidebar: {
           DEFAULT: 'hsl(var(--sidebar-background))',

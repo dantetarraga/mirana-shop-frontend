@@ -81,10 +81,10 @@ const ProductDetails = ({ price }) => {
   }
 
   return (
-    <div className='flex flex-col gap-8 p-8 shadow-sm bg-card rounded-xl animate-fade-in'>
+    <section className='flex flex-col gap-8 p-8 shadow-sm bg-card rounded-xl animate-fade-in'>
       <div className='space-y-4'>
         <div className='flex items-center gap-3'>
-          <h1 className='text-3xl font-extrabold tracking-tight text-[#334155] leading-tight'>
+          <h1 className='text-3xl font-extrabold leading-tight tracking-tight text-primary'>
             Groot Guardians of the Galaxy Vol. 3 – HOT TOYS
           </h1>
           <div className='inline-flex items-center px-3 py-1 text-sm font-bold text-green-600 uppercase rounded-full bg-green-50 animate-scale-in'>
@@ -97,12 +97,16 @@ const ProductDetails = ({ price }) => {
         </div>
       </div>
 
-      <div className='py-6 px-8 bg-[#F8FAFC] rounded-lg border-2 border-[#E2E8F0]'>
+      <div className='px-8 py-6 border-2 rounded-lg bg-card-pricing border-card-pricing-border'>
         <div className='flex items-center justify-between gap-4'>
-          <span className='text-4xl font-black text-[#334155] tracking-tight'>S/.{price}</span>
+          <span className='text-4xl font-black tracking-tight text-card-pricing-price'>
+            S/.{price}
+          </span>
           <div className='flex items-center gap-2'>
-            <span className='text-lg font-bold text-[#0EA5E9]'>¡Gana puntos!</span>
-            <p className='text-lg text-[#64748B]'>
+            <span className='text-lg font-bold text-card-pricing-highlight'>
+              ¡Gana puntos!
+            </span>
+            <p className='text-base text-card-pricing-secondary'>
               Obtén 600 Points
             </p>
           </div>
@@ -139,7 +143,7 @@ const ProductDetails = ({ price }) => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

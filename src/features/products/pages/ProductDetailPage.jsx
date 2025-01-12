@@ -29,28 +29,24 @@ const ProductDetailPage = () => {
     <section className='max-w-[1150px] mx-auto space-y-4'>
 
       <div className='grid grid-cols-1 gap-12 lg:grid-cols-2'>
-        <section>
-          <ProductGallery images={IMAGES_BY_PRODUCT} />
-        </section>
+        <ProductGallery images={IMAGES_BY_PRODUCT} />
 
         {/* Detalles del producto */}
-        <section>
-          <ProductDetails
-            price='124.99'
-            installments='4'
-            paymentMethod='$31.25'
-          />
-        </section>
+        <ProductDetails
+          price='124.99'
+          installments='4'
+          paymentMethod='$31.25'
+        />
       </div>
 
       {/* Descripcion del producto */}
       <section className='w-full p-6 mt-8 shadow-sm bg-card rounded-xl sm:p-8 lg:p-10'>
-        <h2 className='text-2xl font-bold text-[#334155] mb-6'>{productDescription.title}</h2>
+        <h2 className='mb-6 text-2xl font-bold text-description'>{productDescription.title}</h2>
         <div className='prose max-w-none'>
-          <p className='text-[#64748B] text-base sm:text-lg mb-8'>
+          <p className='mb-8 text-base text-primary sm:text-lg'>
             {productDescription.content}
           </p>
-          <ul className='list-disc list-inside space-y-2 text-[#64748B]'>
+          <ul className='space-y-2 list-disc list-inside text-description'>
             {productDescription.features.map((feature, index) => (
               <li key={index} className='text-base sm:text-lg'>{feature}</li>
             ))}
